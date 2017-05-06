@@ -8,7 +8,7 @@
 		
 		<classes>
 			
-			<class name="com.pronto.licenseserver.test.execution.APIUsageValidationExecution" />
+			<class name="com.propertyfinder.test.execution.LoginExecution" />
 			
 		</classes>
 		

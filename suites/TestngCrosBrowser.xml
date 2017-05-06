@@ -4,13 +4,13 @@
 	<test name="SearchChrome">
 	<parameter name="browser" value="Chrome"></parameter>
 		<classes>
-			<class name="com.pronto.test.execution.SearchPanelValidationExecution" />
+			<class name="com.propertyfinder.test.execution.LoginExecution" />
 		</classes>
 	</test>
 	<test name="SearchFirefox">
 	<parameter name="browser" value="FF"></parameter>
 		<classes>
-			<class name="com.pronto.test.execution.SearchPanelValidationExecution" />
+			<class name="com.propertyfinder.test.execution.LoginExecution" />
 		</classes>
 	</test>
 </suite>
