@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" verbose="3" parallel="classes">
+	<test name="SearchChrome">
+	<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+			<class name="com.pronto.test.execution.SearchPanelValidationExecution" />
+		</classes>
+	</test>
+	<test name="SearchFirefox">
+	<parameter name="browser" value="FF"></parameter>
+		<classes>
+			<class name="com.pronto.test.execution.SearchPanelValidationExecution" />
+		</classes>
+	</test>
+</suite>

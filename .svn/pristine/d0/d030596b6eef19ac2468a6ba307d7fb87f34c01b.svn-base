@@ -1,0 +1,42 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.pronto.licenseserver.test.dataobject.LoginData;
+
+public class LoginPage {
+
+	private WebDriver driver;
+
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public LoginPage enterUserName(String userName) {
+		driver.findElement(By.xpath("//*[@id='container']/form/div[4]/input"))
+				.sendKeys(userName);
+		return this;
+	}
+
+	public LoginPage enterPassword(String Password) {
+		driver.findElement(By.xpath("//*[@id='container']/form/div[5]/input"))
+				.sendKeys(Password);
+		return this;
+	}
+
+	public HomePage clickLoginButton() {
+		driver.findElement(By.xpath("//*[@id='container']/form/input")).click();
+		return new HomePage(driver);
+	}
+
+	public ProntoPlusLoginPage clickProntoPlusButton() {
+		driver.findElement(By.className("prontoplus")).click();
+		return new ProntoPlusLoginPage(driver);
+	}
+	
+	public ProntoPlusLoginPage newUserLogin(LoginData loginData) {
+		return clickProntoPlusButton();
+	}
+
+}

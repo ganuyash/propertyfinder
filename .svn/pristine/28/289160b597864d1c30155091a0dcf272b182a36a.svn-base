@@ -1,0 +1,186 @@
+package com.pronto.licenseserver.test.execution;
+
+import java.io.File;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.pronto.licenseserver.test.dataobject.LoginData;
+import com.pronto.licenseserver.test.dataobject.MenuExecutionData;
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+import com.pronto.licenseserver.test.helper.PageWaitHandler;
+import com.pronto.licenseserver.test.helper.ResultHandler;
+import com.pronto.licenseserver.test.helper.TestCasePrevLoad;
+import com.pronto.licenseserver.test.pageobject.Billing;
+import com.pronto.licenseserver.test.pageobject.CreateUserAccount;
+import com.pronto.licenseserver.test.pageobject.Customers;
+import com.pronto.licenseserver.test.pageobject.Dashboard;
+import com.pronto.licenseserver.test.pageobject.EmailTemplates;
+import com.pronto.licenseserver.test.pageobject.GeneralProperties;
+import com.pronto.licenseserver.test.pageobject.HomePage;
+import com.pronto.licenseserver.test.pageobject.LocaleSettings;
+import com.pronto.licenseserver.test.pageobject.LoginPage;
+import com.pronto.licenseserver.test.pageobject.MyAccount;
+import com.pronto.licenseserver.test.pageobject.Notifications;
+import com.pronto.licenseserver.test.pageobject.Plans;
+import com.pronto.licenseserver.test.pageobject.ServerMessages;
+import com.pronto.licenseserver.test.pageobject.SheduledTaskDetails;
+import com.pronto.licenseserver.test.pageobject.UsageDetailFilterPage;
+import com.pronto.licenseserver.test.pageobject.UserList;
+import com.pronto.licenseserver.test.utils.FileOperations;
+
+
+public class MenuExecutionValidation extends TestCasePrevLoad {
+
+	int execuionCount = 1;// Value set to 1, skip the headers
+	String status;
+	String reject = "Empty";
+	String path = "data/TestCases/ValidateMenuPages.xls";
+	
+	
+	@Test(dataProvider = "menuEcecution", dataProviderClass = MenuExecutionData.class)
+	public void validataMenuPages(String userName, String password,
+			String condition, String accessiblePages)
+			throws Exception {
+
+		try {
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+
+			// setting login Data
+			LoginData loginData = new LoginData();
+			loginData.setUserName(userName);
+			loginData.setPassword(password);
+			
+			driver.get("http://172.17.4.74:8080/LicensingServer/login");
+
+			LoginPage loginPage = new LoginPage(driver);
+			HomePage hm = loginPage.newUserLogin(loginData);
+			//Thread.sleep(10000);
+			PageWaitHandler.waitForAjax(30, driver);
+			Assert.assertEquals(driver.getTitle().contains("License Hub"), true);
+
+			Collection<String> s = Arrays.asList(accessiblePages.split(","));
+			System.out.println(s.size());
+			for (String accesiblePage : s) {
+				System.out.println(accesiblePage);
+
+				if (accesiblePage.equalsIgnoreCase(KeywordHandler.dashboardMenu)) {
+
+					Dashboard dashboard = hm.clickDashboard(condition);
+//					Thread.sleep(2000);
+					PageWaitHandler.waitForAjax(30, driver);
+					
+					//PageWaitHandler.waitTillVisible(dashboard.getPageTitleXpath(condition), driver);
+					System.out.println(dashboard.getPageTitle(condition) + "   "+ KeywordHandler.getDashboardpagetitle(condition));
+					Assert.assertEquals(dashboard.getPageTitle(condition).contains(KeywordHandler.getDashboardpagetitle(condition)), true);	
+				}
+				else if(accesiblePage.equalsIgnoreCase(KeywordHandler.usageMenu)){
+					UsageDetailFilterPage usageDetailFilterPage = hm.clickUsage();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(usageDetailFilterPage.getPageTitle(condition) + "   "+ KeywordHandler.usagePageTitle);
+					Assert.assertEquals(usageDetailFilterPage.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.usagePageTitle), true);	
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.billingMenu)){
+					Billing billing = hm.clickBillings();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(billing.getPageTitle(condition) + "   "+ KeywordHandler.billingPageTitle);
+					Assert.assertEquals(billing.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.billingPageTitle), true);
+				}
+				else if(accesiblePage.equalsIgnoreCase(KeywordHandler.plansMenu)){
+					Plans plans = hm.clickPlans();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(plans.getPageTitle(condition) + "   "+ KeywordHandler.plansPageTitle);
+					Assert.assertEquals(plans.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.plansPageTitle), true);	
+				}
+				else if(accesiblePage.equalsIgnoreCase(KeywordHandler.myAccountMenu)){
+					MyAccount myAccount = hm.clickMyAccount();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(myAccount.getPageTitle(condition) + "   "+ KeywordHandler.myAccountPageTitle);
+					Assert.assertEquals(myAccount.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.myAccountPageTitle), true);
+				}
+				else if(accesiblePage.equalsIgnoreCase(KeywordHandler.userListMenu)){
+					UserList userList = hm.clickUserList();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(userList.getPageTitle(condition) + "   "+ KeywordHandler.userListPageTitle);
+					Assert.assertEquals(userList.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.userListPageTitle), true);
+				}
+				else if(accesiblePage.equalsIgnoreCase(KeywordHandler.createUserAccountMenu)){
+					CreateUserAccount createUserAccount = hm.clickCreateUserAccount();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(createUserAccount.getPageTitle(condition) + "   "+ KeywordHandler.createUserAccountPageTitle);
+					Assert.assertEquals(createUserAccount.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.createUserAccountPageTitle), true);
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.notificationMenu)){
+					Notifications notification = hm.clickNotifications();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(notification.getPageTitle(condition) + "   "+ KeywordHandler.notificationPageTitle);
+					Assert.assertEquals(notification.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.notificationPageTitle), true);
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.serverMessageMenu)){
+					ServerMessages serverMesages = hm.clickServerMessages();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(serverMesages.getPageTitle(condition) + "   "+ KeywordHandler.serverMessagePageTitle);
+					Assert.assertEquals(serverMesages.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.serverMessagePageTitle), true);
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.generalPropMenu)){
+					GeneralProperties genaralPrperties = hm.clickGeneralProperties();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(genaralPrperties.getPageTitle(condition) + "   "+ KeywordHandler.generalPropertiesPageTitle);
+					Assert.assertEquals(genaralPrperties.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.generalPropertiesPageTitle), true);
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.billingMenu)){
+					LocaleSettings localeSettings = hm.clickLocaleSettings();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(localeSettings.getPageTitle(condition) + "   "+ KeywordHandler.localeSettingsPageTitle);
+					Assert.assertEquals(localeSettings.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.localeSettingsPageTitle), true);
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.emailTemplateMenu)){
+					EmailTemplates emailtemp = hm.clickEmailTemplates();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(emailtemp.getPageTitle(condition) + "   "+ KeywordHandler.emailTemplatePageTitle);
+					Assert.assertEquals(emailtemp.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.emailTemplatePageTitle), true);
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.sheduledTaskMenu)){
+					SheduledTaskDetails sheduledTask = hm.clickSheduledTaskDetails();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(sheduledTask.getPageTitle(condition) + "   "+ KeywordHandler.sheduleTaskDetailsPageTitle);
+					Assert.assertEquals(sheduledTask.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.sheduleTaskDetailsPageTitle), true);
+				}else if(accesiblePage.equalsIgnoreCase(KeywordHandler.customerMenu)){
+					Customers customer = hm.clickCustomers();
+					PageWaitHandler.waitForAjax(30, driver);
+					System.out.println(customer.getPageTitle(condition) + "   "+ KeywordHandler.customerPageTitle);
+					Assert.assertEquals(customer.getPageTitle(condition).equalsIgnoreCase(KeywordHandler.customerPageTitle), true);
+				}
+					}
+			// If all above steps passed status should be set as PASS
+			status = KeywordHandler.testPass;
+		} catch (AssertionError e) {
+			// if above steps failed Status should be set to fail
+			e.printStackTrace();
+			System.out.println("AssertionError");
+			status = KeywordHandler.testFail;
+			reject = e.getMessage();
+			FileOperations.captureScreenshot(
+					new Exception().getStackTrace()[0].getMethodName(), driver,
+					userName);
+//			System.out.print(e.printStackTrace());
+			throw e;
+		}
+		catch (Exception e) {
+			// if above steps failed Status should be set to fail
+			e.printStackTrace();
+			status = KeywordHandler.testFail;
+			reject = e.getMessage();
+			FileOperations.captureScreenshot(
+					new Exception().getStackTrace()[0].getMethodName(), driver,
+					userName);
+			
+//			System.out.print(e.printStackTrace());
+			throw e;
+		}finally {
+			ResultHandler.writeStatus(new File(path),
+					new Exception().getStackTrace()[0].getMethodName(),
+					execuionCount, status , reject);
+			execuionCount++;
+		}
+
+	}
+}

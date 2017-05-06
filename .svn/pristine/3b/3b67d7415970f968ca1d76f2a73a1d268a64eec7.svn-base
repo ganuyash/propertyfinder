@@ -1,0 +1,98 @@
+package com.pronto.licenseserver.test.helper;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class UsageDelete {
+
+	public static boolean emptyUsageTable(String siteSerial) {
+
+		if (siteSerial.isEmpty() || siteSerial.contains("*")
+				|| siteSerial.equals("")) {
+			return false;
+		} else {
+			boolean status = false;
+			// JDBC driver name and database URL
+			final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+			// final String DB_URL = "jdbc:mysql://localhost/STUDENTS";
+			// final String DB_URL =
+			//
+			// "jdbc:informix-sqli://<host>:<port>/<database>:informixserver=<dbservername>";
+			final String DB_URL = "jdbc:informix-sqli://172.17.4.74:9088/ps2:INFORMIXSERVER=pronto_net";
+			// Database credentials
+			final String USER = "informix";
+			final String PASS = "informix";
+
+			Connection conn = null;
+			Statement stmt = null;
+			try {
+				// Register JDBC driver
+				Class.forName("com.informix.jdbc.IfxDriver");
+
+				// Open a connection
+				System.out.println("Connecting to a selected database...");
+				conn = DriverManager.getConnection(DB_URL, USER, PASS);
+				System.out.println("Connected database successfully...");
+
+				// Execute a query
+				System.out.println("Creating statement...");
+				stmt = conn.createStatement();
+
+				// String sql = "DELETE FROM Registration " + "WHERE id = 101";
+				String sql1 = "delete from lscustusage8 where site_serial_no = '"
+						+ siteSerial + "'";
+				String sql2 = "delete from lsdailyusage3 where site_serial_no = '"
+						+ siteSerial + "'";
+				String sql3 = "delete from lsprodusage3 where site_serial_no = '"
+						+ siteSerial + "'";
+				String sql4 = "delete from lsapicon5 where site_serial_no = '"
+						+ siteSerial + "'";
+				String sql5 = "delete from lsusercon3 where site_serial_no = '"
+						+ siteSerial + "'";
+				String sql6 = "delete from next_request_info where site_serial_no = '"
+						+ siteSerial + "'";
+
+				stmt.executeUpdate(sql1);
+				stmt.executeUpdate(sql2);
+				stmt.executeUpdate(sql3);
+				stmt.executeUpdate(sql4);
+				stmt.executeUpdate(sql5);
+				stmt.executeUpdate(sql6);
+
+				status = true;
+
+			} catch (SQLException se) {
+				// Handle errors for JDBC
+				status = false;
+				se.printStackTrace();
+			} catch (Exception e) {
+				// Handle errors for Class.forName
+				status = false;
+				e.printStackTrace();
+			} finally {
+				// finally block used to close resources
+				try {
+					if (stmt != null)
+						conn.close();
+				} catch (SQLException se) {
+				}// do nothing
+				try {
+					if (conn != null)
+						conn.close();
+				} catch (SQLException se) {
+					se.printStackTrace();
+				}// end finally try
+			}// end try
+			System.out.println("Goodbye!");
+
+			return status;
+//			return true;
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(emptyUsageTable("102030"));
+	}
+}

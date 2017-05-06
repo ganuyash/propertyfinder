@@ -1,0 +1,20 @@
+package com.propertyfinder.test.helper;
+
+public class FailedHttpRequestException extends Exception {
+
+	/**
+	 * @param args
+	 */
+	
+	public FailedHttpRequestException(String message){
+	     super(message);
+	  }
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

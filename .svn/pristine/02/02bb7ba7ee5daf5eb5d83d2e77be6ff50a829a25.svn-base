@@ -1,0 +1,39 @@
+package com.pronto.licenseserver.test.dataobject;
+
+import org.testng.annotations.DataProvider;
+
+import com.pronto.licenseserver.test.helper.ExcelToDataObject;
+
+public class LoginData {
+
+	private String userName;
+	private String Password;
+	private static Object [][] data;
+	public static String path;
+	
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return Password;
+	}
+
+	public void setPassword(String password) {
+		Password = password;
+	}
+
+	@DataProvider(name = "loginData" )
+	public static Object[][] getLoginData() {
+//		return new Object[][] { { "UserName1", "Pass1" },
+//				{ "UserName2", "Pass2" } }; UserlevelCheck.xls
+//		return data;
+		return new ExcelToDataObject("data/TestCases/UserlevelCheck.xls").getDataObject();
+
+	}
+
+}

@@ -1,0 +1,88 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+
+public class MonthlyUsageDetailsPage {
+
+	WebDriver driver;
+	public String pageTitleXpath = "//*[@id='tab2']/div[1]/h1";
+	public String exceededPlanXpath = "//*[@id='customStyle']/tbody[1]/tr[2]/td[1]";
+	public String exceededPlan2Xpath = "//*[@id='customStyle']/tbody[1]/tr[3]/td[1]";
+	public String associatedPlanXpath = "//*[@id='customStyle']/tbody[2]/tr[3]/td[1]";
+	public String meteredTotalBytesXpath = "//*[@id='customStyle']/tbody[2]/tr[6]/td[2]";
+	public String meteredTotalAPICallXpath = "//*[@id='customStyle']/tbody[2]/tr[7]/td[2]";
+	public String meteredTotalBytesPrecentageXpath = "//*[@id='customStyle']/tbody[2]/tr[6]/td[3]";
+	public String meteredTotalAPICallPrecentageXpath = "//*[@id='customStyle']/tbody[2]/tr[7]/td[3]";
+
+	public MonthlyUsageDetailsPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getPageTitle() {
+
+		return driver.findElement(By.xpath(pageTitleXpath)).getText();
+
+	}
+
+	public String getAssociatedPlan() {
+
+		return driver.findElement(By.xpath(associatedPlanXpath)).getText();
+
+	}
+
+	public String getExceededPlan() {
+
+		return driver.findElement(By.xpath(exceededPlanXpath)).getText();
+
+	}
+
+	public Collection<String> getExceededPlans(String condition) {
+
+		Collection<String> s = null;
+		if (KeywordHandler.conditionNormal.equals(condition)) {
+			s = Arrays.asList(driver.findElement(By.xpath(exceededPlanXpath))
+					.getText());
+			return s;
+		} else if (KeywordHandler.conditionSpecial.equals(condition)) {
+			s = Arrays.asList(driver.findElement(By.xpath(exceededPlanXpath))
+					.getText(), driver
+					.findElement(By.xpath(exceededPlan2Xpath)).getText());
+			return s;
+		}
+		return s;
+	}
+
+	public String getMeteredTotalBytes() {
+
+		return driver.findElement(By.xpath(meteredTotalBytesXpath)).getText();
+	}
+
+	public String getMeteredTotalAPICalls() {
+
+		return driver.findElement(By.xpath(meteredTotalAPICallXpath)).getText();
+
+	}
+
+	public String getMeteredTotalBytesPrecentage() {
+
+		String[] str = driver
+				.findElement(By.xpath(meteredTotalBytesPrecentageXpath))
+				.getText().split("%");
+		return str[0];
+	}
+
+	public String getMeteredTotalAPICallsPrecentage() {
+
+		String[] str = driver
+				.findElement(By.xpath(meteredTotalAPICallPrecentageXpath))
+				.getText().split("%");
+		return str[0];
+	}
+}

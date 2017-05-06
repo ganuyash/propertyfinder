@@ -1,0 +1,20 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+
+public class Billing {
+	WebDriver driver;
+	public String pageTitleXpath ="//*[@id='tab2']/div[1]/h1" ;
+	public Billing(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getPageTitle(String condition) {
+		
+		return driver.findElement(By.xpath(pageTitleXpath))
+				.getText();
+	}
+}

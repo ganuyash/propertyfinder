@@ -1,0 +1,83 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class PlanInformation {
+
+	private WebDriver driver;
+
+	public PlanInformation(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getPageTitle() {
+
+		return driver.findElement(By.tagName("h1")).getText();
+	}
+
+	public String getPlanCode() {
+
+		return driver.findElement(By.id("planCode")).getText();
+	}
+	
+	public String getPlanDescription() {
+
+		return driver.findElement(By.id("description")).getText();
+	}
+	
+	public String getPlanItemCode() {
+
+		return driver.findElement(By.id("stockCode")).getText();
+	}
+	
+	public String getDataAllowance() {
+
+		return driver.findElement(By.id("planCode")).getText(); //ID Missing
+	}
+	
+	public String getAPICallAllowance() {
+
+		return driver.findElement(By.id("planCode")).getText(); //ID Missing
+	}
+	
+	public String getPlanStatus() {
+
+		return driver.findElement(By.id("status1")).getText();
+	}
+	
+	public String getUnlimitedStatus() {
+
+//		if(){
+//			
+//		}else{
+//			
+//		}
+		return driver.findElement(By.name("billed")).getAttribute("checked");
+	}
+	
+	public String getAllowXMLAPI() {
+
+		return driver.findElement(By.name("xmlAllowed")).getText();
+	}
+	
+	public String getAllowNonXMLAPI() {
+
+		return driver.findElement(By.name("nonXmlAllowed")).getText();
+	}
+	
+	public String getExcessStockCode() {
+
+		return driver.findElement(By.id("excessStockCode")).getText();
+	}
+	
+	public String getExcessAPITopUpUnit() {
+
+		return driver.findElement(By.id("planCode")).getText(); //ID Missing
+	}
+	
+	public String getExcessDataTopUpUnit() {
+
+		return driver.findElement(By.id("planCode")).getText(); //ID Missing
+	}
+}

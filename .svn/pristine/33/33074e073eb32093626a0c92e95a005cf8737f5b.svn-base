@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" verbose="3" parallel="false">
+	<test name="Search">
+		<classes>
+			<class name="com.pronto.test.execution.SearchPanelValidationExecution" />
+			<class name="com.pronto.test.execution.APIUsageValidationExecution" />
+		</classes>
+	</test>
+</suite>

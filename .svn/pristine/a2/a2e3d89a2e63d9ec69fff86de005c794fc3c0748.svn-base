@@ -1,0 +1,64 @@
+package com.pronto.licenseserver.test.helper;
+
+public class KeywordHandler {
+
+	public static final String testPass = "PASS";
+	public static final String testFail = "Fail";
+	public static final String excelWritingEnabled = "Enabled";
+	public static final String excelWritingDisabled = "Disabled";
+	public static final String[] userLevel = { "Normal", "Customer" };
+	public static final String conditionSpecial = "S";
+	public static final String conditionNormal = "N";
+	
+	//Page Titles
+	
+	public static final String customerPageTitle = "Customer list";
+	public static String dashboardPageTitle = "Customer list";
+	public static final String notificationPageTitle = "Notifications";
+	public static final String usagePageTitle = "Usage detail filter";
+	public static final String monthlyUsageSummaryPageTitle = "Monthly usage summary";
+	public static final String plansPageTitle = "Plan list";
+	public static final String userListPageTitle = "User list";
+	public static final String billingPageTitle = "Customer billing details";
+	public static final String createUserAccountPageTitle = "User registration";
+	public static final String serverMessagePageTitle = "Server messages";
+	public static final String generalPropertiesPageTitle = "General properties";
+	public static final String localeSettingsPageTitle = "Supported locales";
+	public static final String emailTemplatePageTitle = "Email Templates";
+	public static final String sheduleTaskDetailsPageTitle = "Scheduled task details";
+	public static final String myAccountPageTitle = "Profile";
+
+	//Menu Visible Names
+	
+	public static final String dashboardMenu = "Dashboard";
+	public static final String customerMenu = "Customer list";
+	public static final String notificationMenu = "Notifications";
+	public static final String usageMenu = "Usage";
+	public static final String plansMenu = "Plans";
+	public static final String userListMenu = "User list";
+	public static final String billingMenu = "Billing";
+	public static final String createUserAccountMenu = "Create user account";
+	public static final String serverMessageMenu = "Server messages";
+	public static final String generalPropMenu = "General properties";
+	public static final String lacaleMenu = "Locale settings";
+	public static final String emailTemplateMenu = "Email templates";
+	public static final String sheduledTaskMenu = "Scheduled Task Details";
+	public static final String myAccountMenu = "My account";
+
+	
+	//xml request send response messages
+	
+	public static final String success = "Successfully Recorded";
+	
+	
+	
+	public static String getDashboardpagetitle(String condition) {
+
+		if (condition.equalsIgnoreCase(userLevel[0])) {
+			dashboardPageTitle = "Customer list";
+		} else {
+			dashboardPageTitle = "Monthly usage summary";
+		}
+		return dashboardPageTitle;
+	}
+}

@@ -1,0 +1,80 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+
+public class DailyUsagePage {
+
+	WebDriver driver;
+
+	public DailyUsagePage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public List<List<String>> getTableRows() {
+		int i = 0;
+		List<List<String>> rowsCollection = new ArrayList<List<String>>();
+
+		WebElement simpleTable = driver.findElement(By.id("results"));
+
+		List<WebElement> rows = simpleTable.findElements(By.tagName("tr"));
+		System.out.println("IN C Before FOR");
+		// Print data from each row
+		for (WebElement row : rows) {
+
+			ArrayList<String> rowData = new ArrayList<String>();
+			System.out.println("Before getting TD's");
+			if (i > 0) {
+				List<WebElement> cols = row.findElements(By.tagName("td"));
+				System.out.println("After getting TD's");
+				for (WebElement col : cols) {
+					if (!col.getText().equals("")) {
+						rowData.add(col.getText());
+						System.out.print(col.getText() + "|");
+					}
+				}
+				if (!rowData.isEmpty()) {
+					rowsCollection.add(rowData);
+					System.out.println();
+				}
+			}
+			i++;
+		}
+		System.out.println("IN End Of FOR");
+		return rowsCollection;
+	}
+	
+	public String getTableRowCount() {
+		WebElement simpleTable = driver.findElement(By.id("results"));
+		List<WebElement> rows = simpleTable.findElements(By.tagName("tr"));
+		return String.valueOf((rows.size() - 1));
+	}
+	
+	public DailyUsageAPIPage clickAPIButton() {
+		driver.findElement(By.xpath("//*[@id='api1']/input[11]")).click();
+		return new DailyUsageAPIPage(driver);
+	}
+	
+	public DailyUsageUserPage clickUserButton() {
+		driver.findElement(By.xpath("//*[@id='user1']/input[11]")).click();
+		return new DailyUsageUserPage(driver);
+	}
+	
+	public DailyUsageProductPage clickProductButton() {
+		driver.findElement(By.xpath("//*[@id='prod1']/input[11]")).click();
+		return new DailyUsageProductPage(driver);
+	}
+	
+	public DailyUsageAPIPage newDailyAPIUsage() {
+		return clickAPIButton();
+	}
+	
+}

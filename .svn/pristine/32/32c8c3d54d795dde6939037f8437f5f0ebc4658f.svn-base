@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" verbose="3" parallel="false">
+	<test name="Search">
+	<parameter name="browser" value="FF"></parameter>
+		<classes>
+			<class name="com.pronto.test.execution.APIUsageValidationExecution" />
+			<class name="com.pronto.test.execution.DailyUsageAPIValidationExecution" />
+			<class name="com.pronto.test.execution.DailyUsageProductValidationExecution" />
+			<class name="com.pronto.test.execution.DailyUsageUserValidationExecution" />
+			<class name="com.pronto.test.execution.DailyUsageValidationExecution" />
+			<class name="com.pronto.test.execution.LoginExecution" />
+			<class name="com.pronto.test.execution.MenuExecutionValidation" />
+			<class name="com.pronto.test.execution.NavigationExecution" />
+			<class name="com.pronto.test.execution.ProductUsageValidationExecution" />
+			<class name="com.pronto.test.execution.SearchPanelValidationExecution" />
+			<class name="com.pronto.test.execution.UsageValidationExecution" />
+			<class name="com.pronto.test.execution.UserUsageValidationExecution" />
+		</classes>
+	</test>
+</suite>

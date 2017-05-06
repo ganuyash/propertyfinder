@@ -1,0 +1,61 @@
+package com.propertyfinder.test.helper;
+
+import java.util.HashMap;
+
+import net.sourceforge.htmlunit.corejs.javascript.ObjArray;
+
+import com.propertyfinder.test.utils.ExcelSheetDriver;
+
+
+public class ExcelToDataObject {
+
+	Object[][] data ;
+	ExcelSheetDriver xlsUtil;
+	HashMap<Integer,String> colDictionary;
+
+	public ExcelToDataObject() {
+//		try {
+//			xlsUtil = new ExcelSheetDriver(
+//					"C://Users//ganukay.PRONTO//workspace//HubTest//data//Data_New.xls");
+//			colDictionary = xlsUtil.getColumnDictionary();
+//			xlsUtil.ColumnDictionary();
+//			data = new Object[xlsUtil.RowCount()-1][xlsUtil.clumnCount()];
+//			//System.out.println(colDictionary.size());
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+	}
+
+	public ExcelToDataObject(String path) {
+		try {
+			xlsUtil = new ExcelSheetDriver(path);
+			colDictionary = xlsUtil.getColumnDictionary();
+			xlsUtil.ColumnDictionary();
+			data = new Object[xlsUtil.RowCount()-1][xlsUtil.clumnCount()];
+			System.out.println("LENGTH >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+data.length + "  Clmn Cnt >>>>>>>>>>>" + xlsUtil.clumnCount());
+//			data[][]
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public Object[][] getDataObject() {
+
+		for (int rowCnt = 1; rowCnt < xlsUtil.RowCount(); rowCnt++) {
+			// Enter User Name by reading data from Excel
+			System.out.println("SIZE>>>>>>>>>>>>>>>>" + colDictionary.size());
+			for (int col = 0; col < colDictionary.size(); col++) {
+				String s = colDictionary.get(col);
+				System.out.println("Column Dictionary >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+s);
+				//System.out.println(xlsUtil.ReadCell(xlsUtil.GetCell(s), rowCnt));
+				data[rowCnt-1][col] = xlsUtil.ReadCell(xlsUtil.GetCell(s), rowCnt);
+			}
+		}
+		return data;
+	}
+
+//	public static void main(String[] args) {
+//		ExcelToDataObject exl = new ExcelToDataObject();
+//		exl.getDataObject();
+//	}
+}

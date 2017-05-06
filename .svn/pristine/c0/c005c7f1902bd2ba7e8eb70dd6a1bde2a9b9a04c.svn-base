@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" verbose="3" parallel="false">
+
+	<test name="Search">
+	
+	<parameter name="browser" value="Chrome"></parameter>
+		
+		<classes>
+			
+			<class name="com.pronto.licenseserver.test.execution.APIUsageValidationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution" />
+			
+			<!-- <class name="com.pronto.licenseserver.test.execution.DailyUsageValidationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.LoginExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.MenuExecutionValidation" />
+			
+			<class name="com.pronto.licenseserver.test.execution.NavigationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.ProductUsageValidationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.SearchPanelValidationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.UsageValidationExecution" />
+			
+			<class name="com.pronto.licenseserver.test.execution.UserUsageValidationExecution" /> -->
+			
+		</classes>
+		
+	</test>
+	
+</suite>

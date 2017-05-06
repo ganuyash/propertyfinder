@@ -1,0 +1,54 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class DailyUsageUserPage {
+
+	WebDriver driver;
+
+	public DailyUsageUserPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public List<List<String>> getTableRows() {
+		int i = 0;
+		List<List<String>> rowsCollection = new ArrayList<List<String>>();
+
+		WebElement simpleTable = driver.findElement(By.id("results"));
+
+		List<WebElement> rows = simpleTable.findElements(By.tagName("tr"));
+		System.out.println("IN C Before FOR");
+		// Print data from each row
+		for (WebElement row : rows) {
+
+			ArrayList<String> rowData = new ArrayList<String>();
+			if (i > 0) {
+				List<WebElement> cols = row.findElements(By.tagName("td"));
+				for (WebElement col : cols) {
+					if (!col.getText().equals("")) {
+						rowData.add(col.getText());
+						System.out.print(col.getText() + "|");
+					}
+				}
+				if (!rowData.isEmpty()) {
+					rowsCollection.add(rowData);
+					System.out.println();
+				}
+			}
+			i++;
+		}
+		System.out.println("IN End Of FOR");
+		return rowsCollection;
+	}
+
+	public String getTableRowCount() {
+		WebElement simpleTable = driver.findElement(By.id("results"));
+		List<WebElement> rows = simpleTable.findElements(By.tagName("tr"));
+		return String.valueOf((rows.size() - 1));
+	}
+}

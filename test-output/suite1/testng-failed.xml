@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="3" name="Failed suite [suite1]">
+  <parameter name="browser" value="Chrome"/>
+  <test name="Search(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="AfterMethod"/>
+          <include name="beforesuite"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.SearchPanelValidationExecution">
+        <methods>
+          <include name="searchPanelValidation"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.SearchPanelValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="AfterMethod"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.UsageValidationExecution">
+        <methods>
+          <include name="overallUsageValidation"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.UsageValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.UserUsageValidationExecution">
+        <methods>
+          <include name="userUsageValidation"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.UserUsageValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.MenuExecutionValidation">
+        <methods>
+          <include name="validataMenuPages"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.MenuExecutionValidation -->
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="AfterMethod"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageValidationExecution">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="AfterMethod"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.DailyUsageValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.ProductUsageValidationExecution">
+        <methods>
+          <include name="productUsageValidation"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.ProductUsageValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.APIUsageValidationExecution">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="AfterMethod"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.APIUsageValidationExecution -->
+      <class name="com.pronto.licenseserver.test.execution.LoginExecution">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="AfterMethod"/>
+          <include name="LoginExecute" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.LoginExecution -->
+      <class name="com.pronto.licenseserver.test.execution.NavigationExecution">
+        <methods>
+          <include name="homePageValidation"/>
+        </methods>
+      </class> <!-- com.pronto.licenseserver.test.execution.NavigationExecution -->
+    </classes>
+  </test> <!-- Search(failed) -->
+</suite> <!-- Failed suite [suite1] -->

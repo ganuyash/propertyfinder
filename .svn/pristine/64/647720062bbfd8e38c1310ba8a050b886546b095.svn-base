@@ -1,0 +1,22 @@
+package com.pronto.licenseserver.test.utils;
+
+import java.util.Collection;
+import java.util.HashSet;
+
+public class ListComparison {
+
+	
+	public static boolean ArraysEquals(Collection<String> listOne, Collection<String> listTwo) {
+		
+		Collection<String> similar = new HashSet<String>( listOne );
+        Collection<String> different = new HashSet<String>();
+        different.addAll( listOne );
+        different.addAll( listTwo );
+
+        similar.retainAll( listTwo );
+        different.removeAll( similar );
+		
+        System.out.println(different + " ");
+		return different.size()==0;
+	}
+}

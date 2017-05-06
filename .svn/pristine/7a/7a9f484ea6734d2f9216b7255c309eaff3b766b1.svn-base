@@ -1,0 +1,59 @@
+package com.pronto.licenseserver.test.dataobject;
+
+import org.testng.annotations.DataProvider;
+
+import com.pronto.licenseserver.test.helper.ExcelToDataObject;
+
+public class SearchPanelData {
+
+	private String accountCode;
+	private String accountName;
+	private String branch;
+	private String accountType;
+	private static Object[][] data;
+	public static String path;
+
+	public String getAccountCode() {
+		return accountCode;
+	}
+
+	public void setAccountCode(String accountCode) {
+		this.accountCode = accountCode;
+	}
+
+	public String getAccountName() {
+		return accountName;
+	}
+
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
+	}
+
+	public String getBranch() {
+		return branch;
+	}
+
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	@DataProvider(name = "searchPanelData")
+	public static Object[][] getSeachPanelData() {
+		// return new Object[][] { { "UserName1", "Pass1" },
+		// { "UserName2", "Pass2" } }; UserlevelCheck.xls
+		// return data;
+		return new ExcelToDataObject(
+				"data/TestCases/SearchPanel.xls")
+				.getDataObject();
+
+	}
+
+}

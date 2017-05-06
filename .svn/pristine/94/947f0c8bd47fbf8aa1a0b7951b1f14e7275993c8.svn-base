@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proconnect-usage-request>
+                <site-serial-no>102387</site-serial-no>
+                <sequence-no>2</sequence-no>
+                <!-- a Retry or Normal -->
+                <send-type>Normal</send-type>          
+                <timestamp>08/05/2014 13:25:20</timestamp>
+                <host-name>Host123</host-name> 
+                <ip-address>172.34.83.108</ip-address> 
+                <version>V007</version>
+                <usage>
+                                <usage-date>05/05/2014</usage-date>
+                                <product>
+                                                <name></name>
+                                                <api-connections>
+                                                                <api-connection>
+                                                                                <api-name>get-pie-crm-account-details</api-name>
+                                                                                <no-of-calls>150000</no-of-calls>
+                                                                                <bytes-in>1000000</bytes-in>  
+                                                                                <bytes-out>500000</bytes-out> 
+                                                                                <pie>Y</pie> 
+                                                                </api-connection>   
+                                                                <api-connection>
+                                                                                <api-name>get-crm-activity-details</api-name>
+                                                                                <no-of-calls>150000</no-of-calls>
+                                                                                <bytes-in>1000000</bytes-in>  
+                                                                                <bytes-out>500000</bytes-out>
+                                                                                <pie>N</pie> 
+                                                                </api-connection>      
+                                                </api-connections>
+                                                <user-connections>
+                                                                <user-connection>
+                                                                                <user-name>Gary Ablett1</user-name>
+                                                                                <no-of-calls>3000</no-of-calls>
+                                                                                <bytes-in>200</bytes-in>
+                                                                                <bytes-out>1000</bytes-out>
+                                                                </user-connection>
+                                                </user-connections>                                                         
+                                </product>
+                                <product>
+                                                <name>Service Scheduler</name>
+                                                <api-connections>
+                                                                <api-connection>
+                                                                                <api-name>get-crm-account-details</api-name>
+                                                                                <no-of-calls>4000</no-of-calls>
+                                                                                <bytes-in>200</bytes-in>  
+                                                                                <bytes-out>300</bytes-out>
+                                                                                <pie>N</pie> 
+                                                                </api-connection>                                                          
+                                                </api-connections>
+                                                <user-connections>
+                                                                <user-connection>
+                                                                                <user-name>Gary Ablett1</user-name>
+                                                                                <no-of-calls>2000</no-of-calls>
+                                                                                <bytes-in>100</bytes-in>
+                                                                                <bytes-out>150</bytes-out>
+                                                                </user-connection>
+                                                                <user-connection>
+                                                                                <user-name>Gary Ablett2</user-name>
+                                                                                <no-of-calls>2000</no-of-calls>
+                                                                                <bytes-in>100</bytes-in>
+                                                                                <bytes-out>150</bytes-out>
+                                                                </user-connection>                                                       
+                                                </user-connections>                                             
+                                </product>         
+                                <total-byte-count-day>1700</total-byte-count-day>
+                                <total-api-count-day>7000</total-api-count-day>                       
+                </usage>
+                <usage>
+                                <usage-date>06/05/2013</usage-date>
+                                <product>
+                                                <name>Avenue</name>
+                                                <api-connections>
+                                                                <api-connection>
+                                                                                <api-name>get-crm-account-details</api-name>
+                                                                                <no-of-calls>50</no-of-calls>
+                                                                                <bytes-in>25</bytes-in>  
+                                                                                <bytes-out>10</bytes-out>
+                                                                                <pie>N</pie> 
+                                                                </api-connection>                                          
+                                                </api-connections>
+                                                <user-connections>
+                                                                <user-connection>
+                                                                                <user-name>Gary Ablett1</user-name>
+                                                                                <no-of-calls>50</no-of-calls>
+                                                                                <bytes-in>25</bytes-in>
+                                                                                <bytes-out>10</bytes-out>
+                                                                </user-connection>
+                                                </user-connections>                                                         
+                                </product>
+                                <product>
+                                                <name></name>
+                                                <api-connections>
+                                                                <api-connection>
+                                                                                <api-name>get-pie-crm-account-details</api-name>
+                                                                                <no-of-calls>150000</no-of-calls>
+                                                                                <bytes-in>2500000</bytes-in>  
+                                                                                <bytes-out>1000000</bytes-out>
+                                                                                <pie>Y</pie> 
+                                                                </api-connection>                                                          
+                                                </api-connections>
+                                                <user-connections>
+                                                                <user-connection>
+                                                                                <user-name>Gary Ablett1</user-name>
+                                                                                <no-of-calls>700</no-of-calls>
+                                                                                <bytes-in>10</bytes-in>
+                                                                                <bytes-out>8</bytes-out>
+                                                                </user-connection>
+                                                                <user-connection>
+                                                                                <user-name>Gary Ablett2</user-name>
+                                                                                <no-of-calls>800</no-of-calls>
+                                                                                <bytes-in>15</bytes-in>
+                                                                                <bytes-out>2</bytes-out>
+                                                                </user-connection>                                                       
+                                                </user-connections>                                              
+                                </product>         
+                                <total-byte-count-day>70</total-byte-count-day>
+                                <total-api-count-day>1550</total-api-count-day>                       
+                </usage>
+                <total-byte-count>1770</total-byte-count>  
+                <total-no-of-calls>8550</total-no-of-calls>            
+                <hash>3329i3223mldmsdfs9fdsdff</hash>
+</proconnect-usage-request>

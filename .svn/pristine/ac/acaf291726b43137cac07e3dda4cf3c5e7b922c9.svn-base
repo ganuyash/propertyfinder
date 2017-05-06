@@ -1,0 +1,263 @@
+package com.pronto.licenseserver.test.helper;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.FileEntity;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.openqa.selenium.WebDriver;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+public class RequestSend {
+
+	public static boolean sendHttpRequest(String path) {
+		boolean status;
+		DefaultHttpClient client = new DefaultHttpClient();
+		HttpPost post = new HttpPost(
+				"http://172.17.4.74:8080/LicensingServer/usage");
+
+		try {
+			// Reading the file as an entity
+
+			// FileEntity entity = new FileEntity(new File(
+			// "data\\UsageXMLS\\Patinum_Triger.xml"));
+			FileEntity entity = new FileEntity(new File(path));
+			entity.setContentType("text/xml");
+			post.setEntity(entity);
+
+			HttpResponse response = client.execute(post);
+			// int statusCode = response.getStatusLine().getStatusCode();
+
+			// if (statusCode != 200) {
+			// System.out.println(statusCode);
+			// System.out.println(response.getStatusLine().getReasonPhrase());
+			// status = false;
+			//
+			// } else {
+			// status = true;
+			// }
+
+			HttpEntity httpEntity = response.getEntity();
+			// System.out.println(EntityUtils.toString(httpEntity));
+			// getStatusString(httpEntity);
+
+			String message = "empty";
+			String xmlString = EntityUtils.toString(httpEntity);
+			System.out.println(xmlString);
+			DocumentBuilderFactory factory = DocumentBuilderFactory
+					.newInstance();
+			DocumentBuilder db = factory.newDocumentBuilder();
+			InputSource inStream = new InputSource();
+			inStream.setCharacterStream(new StringReader(xmlString));
+			Document doc = db.parse(inStream);
+
+			NodeList nl = doc.getElementsByTagName("message");
+			for (int i = 0; i < nl.getLength(); i++) {
+				message = nl.item(i).getTextContent();
+				System.out.println(message);
+			}
+
+			if (message.equalsIgnoreCase(KeywordHandler.success)) {
+				status = true;
+				System.out.println("true");
+			} else {
+				status = false;
+			}
+
+		} catch (IOException | ParserConfigurationException | SAXException e) {
+			e.printStackTrace();
+			status = false;
+		}
+		return status;
+	}
+
+	public static boolean sendHttpRequestLoop(String path) {
+		boolean status = false;
+		List<String> paths = Arrays.asList(path.split("!"));
+
+		for (String pathNew : paths) {
+			replaceHash(pathNew);
+			DefaultHttpClient client = new DefaultHttpClient();
+			HttpPost post = new HttpPost(
+					"http://172.17.4.74:8080/LicensingServer/usage");
+			try {
+				// Reading the file as an entity
+				FileEntity entity = new FileEntity(new File(pathNew));
+				entity.setContentType("text/xml");
+				post.setEntity(entity);
+
+				HttpResponse response = client.execute(post);
+
+				HttpEntity httpEntity = response.getEntity();
+
+				String message = "empty";
+				String xmlString = EntityUtils.toString(httpEntity);
+				System.out.println(xmlString);
+				DocumentBuilderFactory factory = DocumentBuilderFactory
+						.newInstance();
+				DocumentBuilder db = factory.newDocumentBuilder();
+				InputSource inStream = new InputSource();
+				inStream.setCharacterStream(new StringReader(xmlString));
+				Document doc = db.parse(inStream);
+
+				NodeList nl = doc.getElementsByTagName("message");
+				for (int i = 0; i < nl.getLength(); i++) {
+					message = nl.item(i).getTextContent();
+					System.out.println(message);
+				}
+
+				if (message.equalsIgnoreCase(KeywordHandler.success)) {
+					status = true;
+					System.out.println("true");
+				} else {
+					status = false;
+				}
+
+			} catch (IOException | ParserConfigurationException | SAXException e) {
+				e.printStackTrace();
+				status = false;
+			}
+			System.out.println(pathNew);
+		}
+		return status;
+	}
+
+	public static String getHashCodes(String path) {
+		boolean status = false;
+		String hashCodes = null;
+		List<String> paths = Arrays.asList(path.split("!"));
+
+		for (String pathNew : paths) {
+			DefaultHttpClient client = new DefaultHttpClient();
+			HttpPost post = new HttpPost(
+					"http://172.17.4.74:8080/LicensingServer/hashcheck");
+			try {
+				// Reading the file as an entity
+				FileEntity entity = new FileEntity(new File(pathNew));
+				entity.setContentType("application/xml");
+				post.setEntity(entity);
+
+				HttpResponse response = client.execute(post);
+				HttpEntity httpEntity = response.getEntity();
+
+				String xmlString = EntityUtils.toString(httpEntity);
+				// System.out.println(xmlString);
+				hashCodes = xmlString ;
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				status = false;
+			}
+			// System.out.println(pathNew);
+		}
+		return hashCodes;
+	}
+
+	public static void replaceHash(String path) {
+
+		try {
+//			String[] files = { "data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_Two_API.xml"};
+//			for (String file : files) {
+//				File f = new File(file);
+//				String content = FileUtils.readFileToString(new File(
+//						"data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_Two_API.xml"));
+//				FileUtils.writeStringToFile(f,
+//						content.replaceAll("3329i3223mldmsdfs9fdsdff", getHashCodes(path)));
+//			}
+			
+			File f = new File(path);
+			String content = FileUtils.readFileToString(new File(path));
+			FileUtils.writeStringToFile(f,
+					content.replaceAll("3329i3223mldmsdfs9fdsdff", getHashCodes(path)));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+
+		// System.out
+		// .println(sendHttpRequest("data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_Two_API.xml"));
+//		sendHttpRequest("data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_Two_API.xml");
+		 sendHttpRequestLoop("data\\UsageXMLS\\API\\One_Product_One_t.xml");
+//		for (String hashCode : getHashCodes("data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_Two_API.xml")) {
+//			System.out.println(hashCode);
+//		}
+//		replaceHash("data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_Two_API.xml");
+	}
+
+	public static String getStatusString(HttpEntity httpEntity) {
+		
+		String playcount = "empty";
+		try {
+			String xmlString = EntityUtils.toString(httpEntity);
+			DocumentBuilderFactory factory = DocumentBuilderFactory
+					.newInstance();
+			DocumentBuilder db = factory.newDocumentBuilder();
+			InputSource inStream = new InputSource();
+			inStream.setCharacterStream(new StringReader(xmlString));
+			Document doc = db.parse(inStream);
+
+			NodeList nl = doc.getElementsByTagName("message");
+			for (int i = 0; i < nl.getLength(); i++) {
+				// System.out.println(nl.item(i));
+				if (nl.item(i).getNodeType() == org.w3c.dom.Node.ELEMENT_NODE) {
+					org.w3c.dom.Element nameElement = (org.w3c.dom.Element) nl
+							.item(i);
+					playcount = nameElement.getNodeValue().trim();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return playcount;
+
+	}
+
+	// public static void main(String[] args) {
+	//
+	// // String folderAndFile = createTransaction();
+	//
+	// // creating the HTTP Post
+	// DefaultHttpClient client = new DefaultHttpClient();
+	// HttpPost post = new HttpPost(
+	// "http://172.17.4.74:8080/LicensingServer/usage");
+	//
+	// try {
+	// // Reading the file as an entity
+	//
+	// FileEntity entity = new FileEntity(new File(
+	// "data\\home_Call-valid.xml"));
+	// entity.setContentType("text/xml");
+	// post.setEntity(entity);
+	//
+	// HttpResponse response = client.execute(post);
+	// HttpEntity httpEntity = response.getEntity();
+	//
+	// System.out.println(EntityUtils.toString(httpEntity));
+	//
+	// } catch (IOException e) {
+	// e.printStackTrace();
+	// }
+	// }
+}

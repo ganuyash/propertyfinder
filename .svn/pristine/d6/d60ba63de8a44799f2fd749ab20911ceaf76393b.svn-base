@@ -1,0 +1,14 @@
+package com.pronto.licenseserver.test.utils;
+
+public class GetMessageBody {
+
+	
+	public static void main(String[] args) throws Exception {
+		
+		ReadMailSample read = new ReadMailSample();
+		EmailMessageRemover remover = new EmailMessageRemover();
+		System.out.println(read.readMails());
+		
+	}
+	
+}

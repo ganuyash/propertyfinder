@@ -1,0 +1,101 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.pronto.licenseserver.test.dataobject.SearchPanelData;
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+
+public class Dashboard {
+
+	WebDriver driver;
+	public String pageTitleXpath;
+
+	public Dashboard(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getPageTitle(String condition) {
+
+		if (condition.equalsIgnoreCase(KeywordHandler.userLevel[1])) {
+			return driver.findElement(
+					By.xpath("//*[@id='tab2']/div[1]/table/tbody/tr/td[1]/h1"))
+					.getText();
+
+		} else {
+			return driver.findElement(By.xpath("//*[@id='tab2']/div[1]/h1"))
+					.getText();
+		}
+	}
+
+	public String getPageTitleXpath(String condition) {
+
+		if (condition.equalsIgnoreCase(KeywordHandler.userLevel[1])) {
+			return pageTitleXpath = "//*[@id='tab2']/div[1]/table/tbody/tr/td[1]/h1";
+
+		} else {
+			return pageTitleXpath = "//*[@id='tab2']/div[1]/h1";
+
+		}
+	}
+
+	public Dashboard clickSearchPane() {
+
+		driver.findElement(By.linkText("Search")).click();
+		return this;
+	}
+
+	public Dashboard setAccountCode(String accCode) {
+
+		driver.findElement(By.id("accountCode")).sendKeys(accCode);
+		return this;
+	}
+
+	public Dashboard setAccountName(String accName) {
+
+		driver.findElement(By.id("customerName")).sendKeys(accName);
+		return this;
+	}
+
+	public Dashboard setAccountType(String accType) {
+
+		driver.findElement(By.id("customerType")).sendKeys(accType);
+		return this;
+	}
+
+	public Dashboard setBranch(String branch) {
+
+		driver.findElement(By.id("customerBranch")).sendKeys(branch);
+		return this;
+	}
+
+	public Dashboard clickSearch() {
+
+		driver.findElement(By.id("submitbtn")).click();
+		return this;
+	}
+
+	public Dashboard clickReset() {
+
+		driver.findElement(
+				By.xpath("//*[@id='cusFilter']/table/tbody/tr[4]/td[2]/input"))
+				.click();
+		return this;
+	}
+
+	public CustomerDetailsPage clickFirstRowViewElement() {
+		WebElement view1 = driver.findElement(By.id("view1"));
+		view1.findElement(By.linkText("View")).click();
+		return new CustomerDetailsPage(driver);
+	}
+	
+	public Dashboard newSearch(SearchPanelData search) {
+		return clickSearchPane().setAccountCode(search.getAccountCode())
+				.setAccountName(search.getAccountName())
+				.setBranch(search.getBranch())
+				.setAccountType(search.getAccountType()).clickSearch();
+	}
+	
+	
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="22468" started-at="2017-05-06T10:10:35Z" finished-at="2017-05-06T10:10:58Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="22468" started-at="2017-05-06T10:10:35Z" finished-at="2017-05-06T10:10:58Z">
+      <class name="com.pronto.licenseserver.test.execution.LoginExecution">
+        <test-method status="PASS" signature="beforesuite()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1cd302d3]" name="beforesuite" is-config="true" duration-ms="16" started-at="2017-05-06T15:40:35Z" finished-at="2017-05-06T15:40:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforesuite -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1cd302d3]" name="launchBrowser" is-config="true" duration-ms="2806" started-at="2017-05-06T15:40:35Z" finished-at="2017-05-06T15:40:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="LoginExecute(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1cd302d3]" name="LoginExecute" duration-ms="18200" started-at="2017-05-06T15:40:38Z" data-provider="loginData" finished-at="2017-05-06T15:40:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rent]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Marina]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Apartment]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Monthly]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[MinPrice]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NoPrice]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Max]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Min]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Max]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[2 results]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[L0865DA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginExecute -->
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1cd302d3]" name="AfterMethod" is-config="true" duration-ms="1211" started-at="2017-05-06T15:40:56Z" finished-at="2017-05-06T15:40:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1cd302d3]" name="AfterClass" is-config="true" duration-ms="0" started-at="2017-05-06T15:40:58Z" finished-at="2017-05-06T15:40:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1cd302d3]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-05-06T15:40:58Z" finished-at="2017-05-06T15:40:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="AfterSuit()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1cd302d3]" name="AfterSuit" is-config="true" duration-ms="1" started-at="2017-05-06T15:40:58Z" finished-at="2017-05-06T15:40:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuit -->
+      </class> <!-- com.pronto.licenseserver.test.execution.LoginExecution -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

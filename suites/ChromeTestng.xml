@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" verbose="3" parallel="false">
+
+	<test name="Search">
+	
+	<parameter name="browser" value="Chrome"></parameter>
+		
+		<classes>
+			
+			<class name="com.pronto.licenseserver.test.execution.APIUsageValidationExecution" />
+			
+		</classes>
+		
+	</test>
+	
+</suite>

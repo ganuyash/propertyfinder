@@ -1,0 +1,72 @@
+package com.pronto.licenseserver.test.helper;
+
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.browserlaunchers.Sleeper;
+
+import com.pronto.licenseserver.test.dataobject.LoginData;
+import com.pronto.licenseserver.test.pageobject.HomePage;
+import com.pronto.licenseserver.test.pageobject.LoginPage;
+import com.pronto.licenseserver.test.pageobject.ProntoPlusLoginPage;
+
+public class LoginForm {
+
+	/**
+	 * @param args
+	 */
+	public static HomePage login(WebDriver driver, String username,
+			String password) {
+
+		// setting login Data
+		LoginData loginData = new LoginData();
+		loginData.setUserName(username);
+		loginData.setPassword(password);
+
+		LoginPage loginPage = new LoginPage(driver);
+		ProntoPlusLoginPage prontoPlus = loginPage.clickProntoPlusButton();
+		HomePage hm = prontoPlus.newUserLogin(loginData);
+//		Sleeper.sleepTight(3000);
+//		System.out.println(driver.manage().window().getPosition());
+		
+
+//		System.out.println(isAlertPresent(driver));
+		return hm;
+	}
+
+	public static boolean isAlertPresent(WebDriver driver) {
+
+		Set<String> windows = driver.getWindowHandles();
+		for (String handles : windows) {
+			System.out.println(handles);
+		}
+		try {
+			
+			driver.switchTo().alert();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+
+	}
+
+	public void AcceptJavaAlert(WebDriver driver, int wait) {
+
+		for (int i = 0; i < wait; i++) {
+
+			if (isAlertPresent(driver)) {
+				driver.switchTo().alert().accept();
+				break;
+			} else {
+				Sleeper.sleepTight(1000);
+				System.out
+						.println("Wait Time >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> : "
+								+ i);
+			}
+		}
+
+	}
+}

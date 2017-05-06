@@ -1,0 +1,29 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+public class DailyUsageProductPage {
+
+	WebDriver driver;
+
+	public DailyUsageProductPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public DailyUsageAPIPage clickAPIButton() {
+		driver.findElement(By.xpath("//*[@id='api1']/input[12]")).click();
+		return new DailyUsageAPIPage(driver);
+	}
+	
+	public DailyUsageUserPage clickUserButton() {
+		driver.findElement(By.xpath("//*[@id='user1']/input[12]")).click();
+		return new DailyUsageUserPage(driver);
+	}
+	
+	public DailyUsageAPIPage newDailyAPIUsage() {
+		return clickAPIButton();
+	}
+	
+}

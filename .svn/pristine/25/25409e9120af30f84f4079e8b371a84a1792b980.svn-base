@@ -1,0 +1,84 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.browserlaunchers.Sleeper;
+
+import com.pronto.licenseserver.test.dataobject.LoginData;
+
+public class ProntoPlusLoginPage {
+
+	private WebDriver driver;
+
+	public ProntoPlusLoginPage(WebDriver driver) {
+		this.driver = driver;
+
+	}
+
+	public ProntoPlusLoginPage enterUserName(String userName) {
+		driver.findElement(By.id("user_email_address")).sendKeys(userName);
+		Sleeper.sleepTight(3000);
+		return this;
+	}
+
+	public ProntoPlusLoginPage enterPassword(String Password) {
+		driver.findElement(By.id("user_password")).sendKeys(Password);
+		Sleeper.sleepTight(3000);
+		return this;
+	}
+
+	public HomePage clickLoginButton() {
+//		new Thread(new Runnable() {
+//
+//			@Override
+//			public void run() {
+//				while (true) {
+//					System.out.println("test");
+//					try {
+//						Thread.sleep(5000);
+//						AuthenticationAccept();
+//						System.out.println("After Authentication Accept");
+//					} catch (InterruptedException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//			}
+//		}).start();
+		Sleeper.sleepTight(2000);
+		driver.findElement(By.name("login")).click();
+//		AuthenticationAccept();
+//		System.out.println("Clicked");
+
+		return new HomePage(driver);
+	}
+
+	public HomePage newUserLogin(LoginData loginData) {
+		System.out.println("Before Allert...............");
+		return enterUserName(loginData.getUserName()).enterPassword(
+				loginData.getPassword()).clickLoginButton();
+	}
+
+	public void AuthenticationAccept() {
+		Robot robot;
+		try {
+			robot = new Robot();
+			robot.keyPress(KeyEvent.VK_TAB);
+			StringSelection stringSelection = new StringSelection("name");
+			Toolkit.getDefaultToolkit().getSystemClipboard()
+					.setContents(stringSelection, null);
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

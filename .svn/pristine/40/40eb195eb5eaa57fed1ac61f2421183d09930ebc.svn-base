@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proconnect-usage-request>
+	<site-serial-no>102387</site-serial-no>
+	<sequence-no>02</sequence-no>
+	<!-- a Retry or Normal -->
+	<send-type>Normal</send-type>          
+	<timestamp>28/2/2014 13:25:20</timestamp>
+	<host-name>ishanh-7-dem</host-name> 
+	<ip-address>172.34.83.108</ip-address> 
+	<version>V007</version>
+	<usage>
+		<usage-date>3/2/2014</usage-date>
+		<product>
+			<name></name>
+			<api-connections>
+				<api-connection>
+					<api-name>get-crm-account-details</api-name>
+					<no-of-calls>100000</no-of-calls>
+					<bytes-in>104857600</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</api-connection>                                                         
+			</api-connections>
+			<user-connections>
+				<user-connection>
+					<user-name>Gary Ablett1</user-name>
+					<no-of-calls>100000</no-of-calls>
+					<bytes-in>104857600</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</user-connection>                                                  
+			</user-connections>                                             
+		</product>
+		<product>
+			<name>Service Scheduler1</name>
+			<api-connections>
+				<api-connection>
+					<api-name>get-crm-account-details</api-name>
+					<no-of-calls>100000</no-of-calls>
+					<bytes-in>104857600</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</api-connection>                                                          
+			</api-connections>
+			<user-connections>
+				<user-connection>
+					<user-name>Gary Ablett1</user-name>
+					<no-of-calls>100000</no-of-calls>
+					<bytes-in>104857600</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</user-connection>                                                  
+			</user-connections>                                             
+		</product>
+		<total-byte-count-day>419430400</total-byte-count-day>
+		<total-api-count-day>200000</total-api-count-day>                       
+	</usage>
+	<total-byte-count>419430400</total-byte-count>  
+	<total-no-of-calls>200000</total-no-of-calls>
+	<hash>3329i3223mldmsdfs9fdsdff</hash>
+</proconnect-usage-request>

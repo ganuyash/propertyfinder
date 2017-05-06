@@ -1,0 +1,373 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+import com.pronto.licenseserver.test.helper.PageWaitHandler;
+
+public class HomePage {
+
+	WebDriver driver;
+	Actions builder1;
+	Actions builder2;
+
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public WebElement getDashboardElement() {
+
+		return driver.findElement(By.xpath("//*[@id='dashboard']/a"));
+	}
+
+	public WebElement getUsageElement() {
+
+		return driver.findElement(By.xpath("//*[@id='usage']/a"));
+	}
+
+	public WebElement getBillingElement() {
+
+		return driver.findElement(By.xpath("//*[@id='bil']/a"));
+	}
+
+	public WebElement getAdministrationElement() {
+
+		return driver.findElement(By.xpath("//*[@id='admin']/a"));
+	}
+
+	public WebElement getPlanElement() {
+		System.out
+				.println("Home Page Get Plan Element >>>>>>>>>>>>>>>>>>>>>>>>>>>"
+						+ driver.findElement(By.xpath("//*[@id='plan']/a"))
+								.getText());
+		return driver.findElement(By.xpath("//*[@id='plan']/a"));
+	}
+
+	public WebElement getCoustomerElement() {
+
+		return driver.findElement(By.xpath("//*[@id='cust']/a"));
+	}
+
+	public WebElement getUserListElement() {
+
+		builder1 = new Actions(driver);
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/ul/li[1]/a")))
+				.build().perform();
+		return driver.findElement(By
+				.xpath("//*[@id='admin']/ul/li[1]/ul/li[1]/a"));
+	}
+
+	public WebElement getCreateUserAccountElement() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform(); // Mouse over to Administration
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/ul/li[1]/a")))
+				.build().perform(); // Mouse over to Userdetails
+		return driver.findElement(By
+				.xpath("//*[@id='admin']/ul/li[1]/ul/li[2]/a"));
+	}
+
+	public WebElement getServerMessageElement() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/ul/li[3]/a")))
+				.build().perform(); // Mouse over to Logs
+		return driver
+				.findElement(By.xpath("//*[@id='admin']/ul/li[3]/ul/li/a"));
+	}
+
+	public WebElement getGeneralPropertiesElement() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		return driver.findElement(By.xpath("//*[@id='admin']/ul/li[4]/a"));
+	}
+
+	public WebElement getLocaleSettingsElement() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		return driver.findElement(By.xpath("//*[@id='admin']/ul/li[5]/a"));
+	}
+
+	public WebElement getEmailTemplatesElement() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		return driver.findElement(By.xpath("//*[@id='admin']/ul/li[6]/a"));
+
+	}
+
+	public WebElement getSheduledTaskDetailsElement() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		return driver.findElement(By.xpath("//*[@id='admin']/ul/li[7]/a"));
+	}
+
+	public WebElement getNotificationElement() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform(); // Mouse over to Administration
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[2]/a")).click();
+		return driver.findElement(By.xpath("//*[@id='admin']/ul/li[2]/a"));
+	}
+
+	public WebElement getMyAccountElement() {
+
+		return driver.findElement(By.xpath("//*[@id='profile']/a"));
+	}
+
+	public String getMenuClass() {
+
+		return "pd_menu_01";
+	}
+
+	public Dashboard clickDashboard(String condition) {
+
+		driver.findElement(By.id("cust")).click();
+
+		return new Dashboard(driver);
+	}
+
+	public UsageDetailFilterPage clickUsage() {
+
+		driver.findElement(By.xpath("//*[@id='usage']/a")).click();
+		return new UsageDetailFilterPage(driver);
+	}
+
+	public Plans clickPlans() {
+
+		driver.findElement(By.xpath("//*[@id='plan']/a")).click();
+		return new Plans(driver);
+	}
+
+	public Billing clickBillings() {
+
+		driver.findElement(By.xpath("//*[@id='bil']/a")).click();
+		return new Billing(driver);
+	}
+
+	public MyAccount clickMyAccount() {
+
+		driver.findElement(By.xpath("//*[@id='profile']/a")).click();
+		return new MyAccount(driver);
+	}
+
+	public Customers clickCustomers() {
+
+		driver.findElement(By.xpath("//*[@id='cust']/a")).click();
+		return new Customers(driver);
+	}
+
+	public UserList clickUserList() {
+
+		builder1 = new Actions(driver);
+		builder2 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();
+		PageWaitHandler.waitTillVisible("//*[@id='admin']/ul/li[1]/a", driver);
+		builder2.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/ul/li[1]/a")))
+				.build().perform();
+		PageWaitHandler.waitTillVisible("//*[@id='admin']/ul/li[1]/ul/li[1]/a",
+				driver);
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[1]/ul/li[1]/a"))
+				.click();
+		return new UserList(driver);
+	}
+
+	public CreateUserAccount clickCreateUserAccount() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform(); // Mouse over to Administration
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/ul/li[1]/a")))
+				.build().perform(); // Mouse over to Userdetails
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[1]/ul/li[2]/a"))
+				.click();
+		return new CreateUserAccount(driver);
+	}
+
+	public Notifications clickNotifications() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform(); // Mouse over to Administration
+
+		System.out
+				.println("SUB MENU :::::::::::::::::::::::::::::::::::::::::::: ");
+
+		driver.findElement(By.id("notification")).click();
+		// Notifications
+		
+		return new Notifications(driver);
+	}
+
+	public ServerMessages clickServerMessages() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/ul/li[3]/a")))
+				.build().perform(); // Mouse over to Logs
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[3]/ul/li/a"))
+				.click();
+		return new ServerMessages(driver);
+	}
+
+	public GeneralProperties clickGeneralProperties() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[4]/a")).click();
+		return new GeneralProperties(driver);
+	}
+
+	public LocaleSettings clickLocaleSettings() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[5]/a")).click();
+		return new LocaleSettings(driver);
+	}
+
+	public EmailTemplates clickEmailTemplates() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[6]/a")).click();
+		return new EmailTemplates(driver);
+	}
+
+	public SheduledTaskDetails clickSheduledTaskDetails() {
+
+		builder1 = new Actions(driver);
+		builder1.moveToElement(
+				driver.findElement(By.xpath("//*[@id='admin']/a"))).build()
+				.perform();// Mouse over to Administration
+		driver.findElement(By.xpath("//*[@id='admin']/ul/li[7]/a")).click();
+		return new SheduledTaskDetails(driver);
+	}
+
+	public WebElement getHomePageVisibleElement(String view) {
+		WebElement ele = null;
+		if (view.equalsIgnoreCase("Customer list")) {
+			ele = driver.findElement(By.xpath("//*[@id='tab2']/div[1]/h1"));
+		} else {
+			ele = driver.findElement(By
+					.xpath("//*[@id='tab2']/div[1]/table/tbody/tr/td[1]/h1"));
+		}
+
+		return ele;
+	}
+
+	public List<WebElement> getUserSpecficManuList() {
+
+		java.util.List<WebElement> checks = driver
+				.findElements(By.tagName("a"));
+		java.util.List<WebElement> menuList = null;
+		WebElement parent;
+		for (WebElement webElement : checks) {
+			parent = webElement.findElement(By.xpath(".."))
+					.findElement(By.xpath("..")).findElement(By.xpath(".."));
+			if (parent.getAttribute("class").contains(getMenuClass())) {
+				menuList.add(webElement);
+			}
+		}
+		return menuList;
+	}
+
+	public List<String> getUserSpecficManuListString() {
+
+		java.util.List<WebElement> checks = driver
+				.findElements(By.tagName("a"));
+		java.util.List<String> menuList = new ArrayList<String>();
+		WebElement parent;
+		for (WebElement webElement : checks) {
+			parent = webElement.findElement(By.xpath(".."))
+					.findElement(By.xpath("..")).findElement(By.xpath(".."));
+			if (parent.getAttribute("class").contains(getMenuClass())) {
+				menuList.add(webElement.getText());
+				// System.out
+				// .println("++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+				// + webElement.getText());
+			}
+		}
+		return menuList;
+	}
+
+	public void getElementOnAdministrationMenu(String subMenuName)
+			throws InterruptedException {
+
+		System.out
+				.println("SUB MENU :::::::::::::::::::::::::::::::::::::::::::: "
+						+ subMenuName);
+		WebElement element = null;
+		java.util.List<WebElement> checks = driver.findElements(By
+				.xpath("//*[@id='admin']/ul/*"));
+		for (WebElement webElement : checks) {
+			System.out.println("Iterating through the loop : "
+					+ webElement.getText());
+			if (webElement.getText().contentEquals("Notifications")) {
+				System.out.println("Notification before Clicked");
+				webElement.click();
+				System.out.println("Notification Clicked");
+				Thread.sleep(10000);
+			}
+
+			// if (webElement.getText().contains(subMenuName)) {
+			// element = webElement;
+			// System.out
+			// .println("++++++ NAVIGATION MENU CHECKING  1++++++++"
+			// + element.getText());
+			// System.out
+			// .println("++++++ NAVIGATION MENU CHECKING  2 ++++++++"
+			// + webElement.getText());
+			// }
+		}
+		// return element;
+	}
+}

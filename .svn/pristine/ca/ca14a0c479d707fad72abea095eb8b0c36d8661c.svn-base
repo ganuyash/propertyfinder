@@ -1,0 +1,125 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import com.pronto.licenseserver.test.dataobject.UsageFilterData;
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+
+public class UsageDetailFilterPage {
+	WebDriver driver;
+	public String pageTitleXpath = "//*[@id='usageSum']/div[1]/h1";
+
+	public UsageDetailFilterPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getPageTitle(String condition) {
+
+		return driver.findElement(By.xpath(pageTitleXpath)).getText();
+	}
+
+	public void setMonth(String month) {
+
+		Select select = new Select(driver.findElement(By
+		// .xpath("//*[@id='ui-datepicker-div']/div[1]/div/select[2]")));
+				.className("ui-datepicker-month")));
+		select.selectByVisibleText(month);
+	}
+
+	public void setYear(String year) {
+
+		Select select = new Select(driver.findElement(By
+				.className("ui-datepicker-year")));
+		select.selectByVisibleText(year);
+	}
+
+	public void clickCalenderDoneButton() {
+
+		driver.findElement(
+				By.xpath("// *[@id='ui-datepicker-div']/div[2]/button[2]"))
+				.click();
+	}
+
+	public UsageDetailFilterPage setAccount(String cusName) {
+
+		Select select = new Select(driver.findElement(By.name("CustomerCode")));
+		select.selectByVisibleText(cusName);
+		System.out.println(" !!!!!!!!!!!!!!!!!!!! " + cusName
+				+ "!!!!!!!!!!!!!!!");
+		return this;
+	}
+
+	public UsageDetailFilterPage setUsageType(String usageType) {
+
+		// using findElements() method along with Radio Group identifier
+		List<WebElement> usageTypes = driver.findElements(By.id("checkbx"));
+		for (WebElement type : usageTypes) {
+			// Search for Usage Type in the Radio Group and select it
+			if (type.getAttribute("value").equals(usageType)) {
+				if (!type.isSelected())
+					type.click();
+				break;
+			}
+		}
+		return this;
+	}
+
+	public UsageDetailFilterPage clickCalenderImg() {
+
+		driver.findElement(
+				By.xpath("//*[@id='usageSum']/div[2]/table[1]/tbody/tr[1]/td[2]/img"))
+				.click();
+		return this;
+	}
+
+	public UsageDetailFilterPage setCalenderDate(String month, String year) {
+		try {
+			clickCalenderImg();
+			Thread.sleep(2000);
+			setMonth(month);
+			setYear(year);
+			clickCalenderDoneButton();
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+
+	public Object clickSubmit(String usageType) {
+		try {
+			Thread.sleep(2000);
+			driver.findElement(By.id("submitbtn")).click();
+			if (usageType.equalsIgnoreCase("overall")) {
+				return new MonthlyUsageDetailsPage(driver);
+			} else if (usageType.equalsIgnoreCase("Daily")) {
+				return new DailyUsagePage(driver);
+			} else if (usageType.equalsIgnoreCase("API")) {
+				return new APIUsagePage(driver);
+			} else if (usageType.equalsIgnoreCase("Prod")) {
+				return new ProductUsagePage(driver);
+			} else if (usageType.equalsIgnoreCase("Custuser")) {
+				return new UserUsagePage(driver);
+			} else {
+				return this;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return this;
+		}
+	}
+
+	public Object newUsageFilter(UsageFilterData usageFilterData) {
+		return setCalenderDate(usageFilterData.getMonth(),
+				usageFilterData.getYear())
+				.setAccount(usageFilterData.getAccount())
+				.setUsageType(usageFilterData.getUsageType())
+				.clickSubmit(usageFilterData.getUsageType());
+	}
+
+}

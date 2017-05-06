@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [suite1]">
+  <parameter name="browser" value="Chrome"/>
+  <test name="Search(failed)" preserve-order="true">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution">
+        <methods>
+          <include name="dailyUsageUserValidation"/>
+          <include name="beforesuite"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.UsageValidationExecution">
+        <methods>
+          <include name="overallUsageValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.SearchPanelValidationExecution">
+        <methods>
+          <include name="searchPanelValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.ProductUsageValidationExecution">
+        <methods>
+          <include name="productUsageValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution">
+        <methods>
+          <include name="dailyUsageProductValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.LoginExecution">
+        <methods>
+          <include name="LoginExecute"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageValidationExecution">
+        <methods>
+          <include name="dailyUsageValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.UserUsageValidationExecution">
+        <methods>
+          <include name="userUsageValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.NavigationExecution">
+        <methods>
+          <include name="homePageValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.APIUsageValidationExecution">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="AfterMethod"/>
+          <include name="apiUsageValidation"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.MenuExecutionValidation">
+        <methods>
+          <include name="validataMenuPages"/>
+        </methods>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution">
+        <methods>
+          <include name="dailyUsageAPIValidation"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

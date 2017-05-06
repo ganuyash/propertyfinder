@@ -1,0 +1,22 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+
+public class Plans {
+	WebDriver driver;
+	public String pageTitleXpath ="//*[@id='tab2']/div[1]/h1" ;
+	public Plans(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getPageTitle(String condition) {
+		System.out.println("Plans Object >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + driver.findElement(By.xpath("//*[@id='tab2']/div[1]/h1")).getText());
+		return driver.findElement(By.xpath("//*[@id='tab2']/div[1]/h1"))
+				.getText();
+
+	}
+
+}

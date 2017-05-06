@@ -1,0 +1,40 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+
+public class CustomerDetailsPage {
+	private WebDriver driver;
+	public String pageTitleXpath = "//*[@id='tab2']/div[1]/h1";
+
+	public CustomerDetailsPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getPageTitle(String condition) {
+
+		return driver.findElement(By.xpath(pageTitleXpath)).getText();
+	}
+	
+	public String getAccountType() {
+
+		return driver.findElement(By.name("customerType")).getAttribute("value");
+	}
+	
+	public String getBranch() {
+
+		return driver.findElement(By.name("branchCode")).getAttribute("value");
+	}
+	
+	public String getAccountCode() {
+
+		return driver.findElement(By.name("accountCode")).getAttribute("value");
+	}
+	
+	public String getAccountName() {
+		
+		return driver.findElement(By.name("customerName")).getAttribute("value");
+	}
+}

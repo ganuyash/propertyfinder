@@ -1,0 +1,146 @@
+package com.pronto.licenseserver.test.execution;
+
+import java.io.File;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.pronto.licenseserver.test.dataobject.LoginData;
+import com.pronto.licenseserver.test.dataobject.UsageFilterData;
+import com.pronto.licenseserver.test.helper.HtmlTableHandler;
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+import com.pronto.licenseserver.test.helper.LoginForm;
+import com.pronto.licenseserver.test.helper.PageWaitHandler;
+import com.pronto.licenseserver.test.helper.RequestSend;
+import com.pronto.licenseserver.test.helper.ResultHandler;
+import com.pronto.licenseserver.test.helper.TestCasePrevLoad;
+import com.pronto.licenseserver.test.helper.UsageDelete;
+import com.pronto.licenseserver.test.pageobject.DailyUsageAPIPage;
+import com.pronto.licenseserver.test.pageobject.DailyUsagePage;
+import com.pronto.licenseserver.test.pageobject.HomePage;
+import com.pronto.licenseserver.test.pageobject.LoginPage;
+import com.pronto.licenseserver.test.pageobject.UsageDetailFilterPage;
+import com.pronto.licenseserver.test.utils.FileOperations;
+import com.pronto.licenseserver.test.utils.StringHandler;
+
+
+public class DailyUsageAPIValidationExecution extends TestCasePrevLoad {
+
+	int execuionCount = 1;// Value set to 1, skip the headers
+	String status;
+	String reject = "Empty";
+	String path = "data/TestCases/DailyUsageAPI.xls";
+
+	@Test(dataProvider = "usageFilterData", dataProviderClass = UsageFilterData.class)
+	public void dailyUsageAPIValidation(String TestCaseNo, String userName,
+			String password, String condition, String month, String year,
+			String siteSerial, String cusSequance, String usageType,
+			String xmlFilePath, String rowCount, String row1, String row2, String row3, String row4)
+			throws Exception {
+
+		try {
+			if (UsageDelete.emptyUsageTable(siteSerial)
+					& RequestSend.sendHttpRequestLoop(xmlFilePath)) {
+
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				WebDriverWait wait = new WebDriverWait(driver, 20);
+
+				// setting login Data
+//				LoginData loginData = new LoginData();
+//				loginData.setUserName(userName);
+//				loginData.setPassword(password);
+
+				driver.get("http://172.17.4.74:8080/LicensingServer/login");
+
+//				LoginPage loginPage = new LoginPage(driver);
+				HomePage hm = LoginForm.login(driver, userName, password);
+				PageWaitHandler.waitForAjax(30, driver);
+				Assert.assertEquals(driver.getTitle().contains("License Hub"),
+						true);
+
+				// Navigate to Usage Details Filter Page
+
+				UsageDetailFilterPage usageDetailFilterPage = hm.clickUsage();
+				PageWaitHandler.waitForAjax(30, driver);
+				Assert.assertEquals(
+						usageDetailFilterPage
+								.getPageTitle(condition)
+								.equalsIgnoreCase(KeywordHandler.usagePageTitle),
+						true);
+
+				// setting filtering criteria
+
+				UsageFilterData usageFilterData = new UsageFilterData();
+				usageFilterData.setMonth(month);
+				usageFilterData.setYear(year);
+				usageFilterData.setAccount(cusSequance);
+				usageFilterData.setUsageType(usageType);
+				DailyUsagePage dailyUsage = (DailyUsagePage) usageDetailFilterPage
+						.newUsageFilter(usageFilterData);
+				PageWaitHandler.waitForAjax(30, driver);
+				// Clicking Daily API Usage
+				DailyUsageAPIPage dailyAPI = dailyUsage.newDailyAPIUsage();
+				PageWaitHandler.waitForAjax(30, driver);
+				// Validation Logic goes here
+				Assert.assertEquals(HtmlTableHandler.getTableRowCount(driver), rowCount);
+				List<List<String>> s = HtmlTableHandler.getTableRows(driver);
+				for (int i = 1; i <= Integer.parseInt(rowCount); i++) {
+					String row = null;
+					if (i == 1) {
+						row = row1;
+					} else if (i == 2) {
+						row = row2;
+					} else if (i == 3) {
+						row = row3;
+					}else if (i == 4) {
+						row = row4;
+					}
+					System.out.println(StringHandler.getCollection(row, "!"));
+					System.out.println(s.get(i - 1) + " "
+							+ StringHandler.getCollection(row, "!"));
+					Assert.assertEquals(s.get(i - 1),
+							StringHandler.getCollection(row, "!"));
+				}
+				status = KeywordHandler.testPass;
+			} else {
+				status = KeywordHandler.testFail;
+				reject = "Failed Due to HTTP request";
+				System.out.println("Failed Due to HTTP request");
+			}
+
+		} catch (AssertionError e) {
+			// if above steps failed Status should be set to fail
+			e.printStackTrace();
+			System.out.println("AssertionError");
+			status = KeywordHandler.testFail;
+			reject = e.getMessage();
+			FileOperations.captureScreenshot(
+					new Exception().getStackTrace()[0].getMethodName(), driver,
+					TestCaseNo);
+			throw e;
+		} catch (Exception e) {
+			// if above steps failed Status should be set to fail
+			e.printStackTrace();
+			status = KeywordHandler.testFail;
+			reject = e.getMessage();
+			FileOperations.captureScreenshot(
+					new Exception().getStackTrace()[0].getMethodName(), driver,
+					TestCaseNo);
+			throw e;
+		} finally {
+			UsageDelete.emptyUsageTable(siteSerial);
+			ResultHandler.writeStatus(new File(path),
+					new Exception().getStackTrace()[0].getMethodName(),
+					execuionCount, status, reject);
+			System.out.println(new File(path) + "  "
+					+ new Exception().getStackTrace()[0].getMethodName() + " "
+					+ execuionCount + " " + status);
+			execuionCount++;
+		}
+
+	}
+
+}

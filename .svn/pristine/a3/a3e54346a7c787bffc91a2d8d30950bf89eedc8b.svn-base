@@ -1,0 +1,17 @@
+package com.pronto.licenseserver.test.dataobject;
+
+import org.testng.annotations.DataProvider;
+
+import com.pronto.licenseserver.test.helper.ExcelToDataObject;
+
+public class MenuExecutionData {
+
+
+
+	@DataProvider(name = "menuEcecution" )
+	public static Object[][] getLoginData() {
+
+		return new ExcelToDataObject("data/TestCases/ValidateMenuPages.xls").getDataObject();
+	}
+
+}

@@ -1,0 +1,101 @@
+package com.pronto.licenseserver.test.execution;
+
+import java.io.File;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.pronto.licenseserver.test.dataobject.LoginData;
+import com.pronto.licenseserver.test.dataobject.PlanListData;
+import com.pronto.licenseserver.test.helper.HtmlTableHandler;
+import com.pronto.licenseserver.test.helper.KeywordHandler;
+import com.pronto.licenseserver.test.helper.PageWaitHandler;
+import com.pronto.licenseserver.test.helper.ResultHandler;
+import com.pronto.licenseserver.test.helper.TestCasePrevLoad;
+import com.pronto.licenseserver.test.pageobject.HomePage;
+import com.pronto.licenseserver.test.pageobject.LoginPage;
+import com.pronto.licenseserver.test.pageobject.Plans;
+import com.pronto.licenseserver.test.utils.FileOperations;
+
+public class PlanValidationExecution extends TestCasePrevLoad {
+
+	int execuionCount = 1;// Value set to 1, skip the headers
+	String status;
+	String reject = "Empty";
+	String path = "data//TestCases//PlanValidation.xls";
+
+	@Test(dataProvider = "planValidation", dataProviderClass = PlanListData.class)
+	public void PlanValidation(String TestCaseNo, String userName,
+			String password, String condition, String searchString)
+			throws Exception {
+
+		try {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+
+			// setting login Data
+			LoginData loginData = new LoginData();
+			loginData.setUserName(userName);
+			loginData.setPassword(password);
+
+			driver.get("http://172.17.4.74:8080/LicensingServer/login");
+			// driver.get("http://172.17.33.9:8080/LicensingServer/login");
+
+			LoginPage loginPage = new LoginPage(driver);
+			HomePage hm = loginPage.newUserLogin(loginData);
+			PageWaitHandler.waitForAjax(30, driver);
+			Assert.assertEquals(driver.getTitle().contains("License Hub"), true);
+
+			// Navigate to Plan Details Page
+
+			Plans plans = hm.clickPlans();
+			PageWaitHandler.waitForAjax(30, driver);
+			// Assert.assertEquals(
+			// plans
+			// .getPageTitle(condition)
+			// .equalsIgnoreCase(KeywordHandler.plansPageTitle),
+			// true);
+			System.out.println("Test Method");
+//			System.out.println(HtmlTableHandler.getRowElementByColumnValue(driver, searchString, 0).getText());
+			HtmlTableHandler.getRowElementByColumnValue(driver, searchString, 0).findElement(By.linkText("View")).click();
+			PageWaitHandler.waitForAjax(30, driver);
+			
+			
+			status = KeywordHandler.testPass;
+
+		} catch (AssertionError e) {
+			// if above steps failed Status should be set to fail
+			e.printStackTrace();
+			System.out.println("AssertionError");
+			status = KeywordHandler.testFail;
+			reject = e.getMessage();
+			FileOperations.captureScreenshot(
+					new Exception().getStackTrace()[0].getMethodName(), driver,
+					TestCaseNo);
+			throw e;
+		} catch (Exception e) {
+			// if above steps failed Status should be set to fail
+			e.printStackTrace();
+			status = KeywordHandler.testFail;
+			reject = e.getMessage();
+			FileOperations.captureScreenshot(
+					new Exception().getStackTrace()[0].getMethodName(), driver,
+					TestCaseNo);
+			throw e;
+		} finally {
+			ResultHandler.writeStatus(new File(path),
+					new Exception().getStackTrace()[0].getMethodName(),
+					execuionCount, status, reject);
+			data.add(new String[] {
+					new Exception().getStackTrace()[0].getMethodName(),
+					String.valueOf(execuionCount), status, reject });
+			System.out.println(new File(path) + "  "
+					+ new Exception().getStackTrace()[0].getMethodName() + " "
+					+ execuionCount + " " + status);
+			execuionCount++;
+		}
+	}
+}

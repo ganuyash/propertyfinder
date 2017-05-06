@@ -1,0 +1,13 @@
+package com.pronto.licenseserver.test.pageobject;
+
+import org.openqa.selenium.WebDriver;
+
+public class Administration {
+	WebDriver driver;
+	public String pageTitleXpath ="" ;
+	
+	public Administration(WebDriver driver) {
+		this.driver = driver;
+	}
+
+}

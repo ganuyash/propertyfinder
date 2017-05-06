@@ -1,0 +1,39 @@
+package com.propertyfinder.test.utils;
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.*;
+import javax.swing.text.*;
+import javax.swing.text.html.*;
+import javax.swing.text.html.parser.*;
+
+public class HtmlParser {
+	
+	public static String MatchAnchor(String html1) throws Exception {
+	      
+	      String html2 = html1;
+	      Reader reader = new StringReader(html2);
+	      HTMLEditorKit.Parser parser = new ParserDelegator();
+	      final List<String> links = new ArrayList<String>();
+
+	      parser.parse(reader, new HTMLEditorKit.ParserCallback(){
+	          public void handleStartTag(HTML.Tag t, MutableAttributeSet a, int pos) {
+	              if(t == HTML.Tag.A) {
+	                  Object link = a.getAttribute(HTML.Attribute.HREF);
+	                  if(link != null) {
+	                      links.add(String.valueOf(link));
+	                  }
+	              }
+	          }
+	      }, true);
+
+	      reader.close();
+	      
+	      if(!links.isEmpty()){
+	   	   //System.out.println(links.isEmpty());
+	       
+	   	   System.out.println(links.get(0));
+	      }
+		return links.get(0);
+	  }
+
+}

@@ -1,0 +1,2755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="37" failed="1" total="39" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="suite1" duration-ms="64571" started-at="2014-06-13T15:08:36Z" finished-at="2014-06-13T15:09:40Z">
+    <groups>
+    </groups>
+    <test name="Search" duration-ms="64571" started-at="2014-06-13T15:08:36Z" finished-at="2014-06-13T15:09:40Z">
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution">
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageAPIValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="dailyUsageAPIValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_One_API.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!get-crm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageAPIValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="dailyUsageAPIValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyAPI\\Metered_Bytes_Two_API.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!get-crm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!get-hrm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageAPIValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="dailyUsageAPIValidation" duration-ms="1" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyAPI\\Unmetered_Bytes_Two_API.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!get-crm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!get-hrm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageAPIValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="dailyUsageAPIValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyAPI\\Unmetered_Bytes_One_API.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!get-crm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageAPIValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="dailyUsageAPIValidation" duration-ms="1" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyAPI\\Both_Two_API.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!get-crm-account-details!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!get-crm-account-details!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!get-hrm-account-details!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!get-hrm-account-details!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageAPIValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="dailyUsageAPIValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyAPI\\Both_One_API.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!get-crm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!get-crm-account-details!51,200!153,600!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageAPIValidationExecution@38c8c892]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.APIUsageValidationExecution">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.APIUsageValidationExecution@7dfabdc2]" name="launchBrowser" is-config="true" duration-ms="6456" started-at="2014-06-13T15:08:36Z" finished-at="2014-06-13T15:08:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="apiUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.APIUsageValidationExecution@7dfabdc2]" name="apiUsageValidation" duration-ms="32388" started-at="2014-06-13T15:08:42Z" finished-at="2014-06-13T15:09:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[API]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\API\\One_Product_One.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[get-crm-account-details!204,800!204,800!409,600!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[get-hrm-account-details!204,800!204,800!409,600!200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.APIUsageValidationExecution@7dfabdc2]" name="AfterMethod" is-config="true" duration-ms="2431" started-at="2014-06-13T15:09:15Z" finished-at="2014-06-13T15:09:17Z">
+        </test-method>
+        <test-method status="FAIL" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.APIUsageValidationExecution@7dfabdc2]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:17Z" finished-at="2014-06-13T15:09:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Chrome failed to start: exited normally
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 21.29 seconds
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'ganukay-7-int', ip: '172.17.33.8', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited normally
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 21.29 seconds
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'ganukay-7-int', ip: '172.17.33.8', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:126)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:171)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:160)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:117)
+	at com.pronto.licenseserver.test.helper.TestCasePrevLoad.launchBrowser(TestCasePrevLoad.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:543)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:212)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:631)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:883)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1208)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:758)
+	at org.testng.TestRunner.run(TestRunner.java:613)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1137)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1062)
+	at org.testng.TestNG.run(TestNG.java:974)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="SKIP" signature="apiUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.APIUsageValidationExecution@7dfabdc2]" name="apiUsageValidation" duration-ms="1" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[API]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\API\\One_Product_One.xml!data\\UsageXMLS\\API\\One_Product_Two.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[get-crm-account-details!409,600!409,600!819,200!400]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[get-hrm-account-details!409,600!409,600!819,200!400]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.APIUsageValidationExecution@7dfabdc2]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.APIUsageValidationExecution@7dfabdc2]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.UsageValidationExecution">
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.UsageValidationExecution@2e4d3abf]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="FAIL" signature="overallUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UsageValidationExecution@2e4d3abf]" name="overallUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:130)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:414)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1358)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1058)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1160)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:758)
+	at org.testng.TestRunner.run(TestRunner.java:613)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1137)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1062)
+	at org.testng.TestNG.run(TestNG.java:974)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:293)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NullPointerException
+	at com.pronto.licenseserver.test.helper.ExcelToDataObject.getDataObject(ExcelToDataObject.java:46)
+	at com.pronto.licenseserver.test.dataobject.UsageFilterData.getLoginData(UsageFilterData.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:117)
+	... 23 more
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.SearchPanelValidationExecution">
+        <test-method status="SKIP" signature="searchPanelValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="searchPanelValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Reseller]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Search]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[AccountType]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="searchPanelValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="searchPanelValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Search]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[AccountName]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="searchPanelValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="searchPanelValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[BEAVERENG]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Search]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[AccountCode]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="searchPanelValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="searchPanelValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[NSW]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Search]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Branch]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="searchPanelValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="searchPanelValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Reseller]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Reset]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[AccountType]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.SearchPanelValidationExecution@504be958]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.NavigationExecution">
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="homePageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="homePageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pronto_SV]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[prontotest123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ProntoStaffViewer]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Usage,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Customer list]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="homePageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="homePageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ProntoAdmin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Usage,Billing,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Customer list]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="homePageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="homePageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[QA_Reseller_Admin1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[prontotest123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ResellerAdmin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Usage,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Customer list]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="homePageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.NavigationExecution@9a82499]" name="homePageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pronto_CA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[prontotest123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CustomerAdmin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Customers,Usage,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Monthly usage summary]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.MenuExecutionValidation">
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.MenuExecutionValidation@58c04c2b]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.MenuExecutionValidation@58c04c2b]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.MenuExecutionValidation@58c04c2b]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="validataMenuPages(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.MenuExecutionValidation@58c04c2b]" name="validataMenuPages" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Normal]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Usage,Billing,Plans,Notifications,User list,Create user account,Server messages,General properties,Locale settings,Email templates,Scheduled Task Details,My account]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.UserUsageValidationExecution">
+        <test-method status="SKIP" signature="userUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="userUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Custuser]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\User\\One_Product_One_User.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Gary Ablett1!204,800!204,800!409,600!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="userUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="userUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Custuser]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\User\\One_Product_Two_User.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Gary Ablett1!51,200!51,200!102,400!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Gary Ablett2!51,200!51,200!102,400!200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="userUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="userUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Custuser]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\User\\Two_Products_Two_Users.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Gary Ablett1!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Gary Ablett2!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="userUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="userUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Custuser]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\User\\Two_Products_One_User.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Gary Ablett1!204,800!204,800!409,600!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.UserUsageValidationExecution@3ef9ead4]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.ProductUsageValidationExecution">
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.ProductUsageValidationExecution@27c4b997]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="productUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.ProductUsageValidationExecution@27c4b997]" name="productUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Prod]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Product\\Two_Products.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Service Scheduler1!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.ProductUsageValidationExecution@27c4b997]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.ProductUsageValidationExecution@27c4b997]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="productUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.ProductUsageValidationExecution@27c4b997]" name="productUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Prod]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Product\\Two_Products.xml!data\\UsageXMLS\\Product\\Two_Products_Two.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[409,600!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Service Scheduler1!409,600!200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.ProductUsageValidationExecution@27c4b997]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.ProductUsageValidationExecution@27c4b997]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution">
+        <test-method status="PASS" signature="beforesuite()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="beforesuite" is-config="true" duration-ms="12" started-at="2014-06-13T15:08:36Z" finished-at="2014-06-13T15:08:36Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageUserValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="dailyUsageUserValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyUser\\One_Product_One_User.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Gary Ablett1!204,800!204,800!409,600!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageUserValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="dailyUsageUserValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyUser\\Two_Products_One_User.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Gary Ablett1!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!Gary Ablett1!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageUserValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="dailyUsageUserValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyUser\\One_Product_Two_User.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Gary Ablett1!51,200!51,200!102,400!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Gary Ablett2!51,200!51,200!102,400!200]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageUserValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="dailyUsageUserValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyUser\\Two_Products_Two_Users.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Gary Ablett1!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!Service Scheduler1!Gary Ablett2!102,400!102,400!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="afterTest" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterSuit()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageUserValidationExecution@77946086]" name="AfterSuit" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution">
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageProductValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="dailyUsageProductValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyProduct\\One_Product_Two.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!Service Scheduler1!3/02/14!409,600!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageProductValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="dailyUsageProductValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyProduct\\One_Product_One.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!409,600!200]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageProductValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageProductValidationExecution@64747ce6]" name="dailyUsageProductValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\DailyProduct\\Two_Products.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!Service Scheduler1!3/02/14!204,800!100]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.DailyUsageValidationExecution">
+        <test-method status="SKIP" signature="dailyUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="dailyUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\Metered_Bytes_Only.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!4/02/14!309,248!100]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="dailyUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\Metered_And_Unmetered_Bytes.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!409,600!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!4/02/14!514,048!100]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="dailyUsageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="dailyUsageValidation" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Feb]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[102387]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[BEAVERENG - Eycqyr 5lkjlyyrjlk Wqa Qqh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Daily]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[data\\UsageXMLS\\Daily\\Unmetered_Bytes_Only.xml]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[102387!1.0!3/02/14!204,800!100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[102387!1.0!4/02/14!204,800!0]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.DailyUsageValidationExecution@4b706125]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+      <class name="com.pronto.licenseserver.test.execution.LoginExecution">
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="LoginExecute(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="LoginExecute" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ganuka]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ganuka123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ProntoAdmin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Usage,Billing,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Customer list]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="LoginExecute(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="LoginExecute" duration-ms="1" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pronto_SV]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[prontotest123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ProntoStaffViewer]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Usage,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Customer list]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="LoginExecute(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="LoginExecute" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[QA_Reseller_Admin1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[prontotest123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ResellerAdmin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Usage,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Customer list]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="LoginExecute(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="LoginExecute" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pronto_CA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[prontotest123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CustomerAdmin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dashboard,Customers,Usage,Plans,Administration,My account]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Monthly usage summary]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="launchBrowser(java.lang.String)[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="launchBrowser" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="AfterClass" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+        <test-method status="SKIP" signature="AfterMethod()[pri:0, instance:com.pronto.licenseserver.test.execution.LoginExecution@1bb41390]" name="AfterMethod" is-config="true" duration-ms="0" started-at="2014-06-13T15:09:40Z" finished-at="2014-06-13T15:09:40Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

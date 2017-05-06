@@ -1,0 +1,82 @@
+package com.propertyfinder.test.utils;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Hashtable;
+
+import jxl.Cell;
+import jxl.Sheet;
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
+
+public class ExcelSheetDriver {
+
+	static Sheet wrksheet;
+	static Workbook wrkbook = null;
+	static Hashtable<String, Integer> dict = null;
+	static HashMap<Integer,String > dictGet = null;
+
+	// Create a Constructor
+	public ExcelSheetDriver(String ExcelSheetPath) throws BiffException,
+			IOException {
+		// Initialize
+		wrkbook = Workbook.getWorkbook(new File(ExcelSheetPath));
+		//the excel sheet path is hardcoded,
+		wrksheet = wrkbook.getSheet("TestData");
+	}
+
+	// Returns the Number of Rows
+	public static int RowCount() {
+		return wrksheet.getRows();
+	}
+
+	public static int clumnCount() {
+		return wrksheet.getColumns();
+	}
+	// Returns the Cell value by taking row and Column values as argument
+	public static String ReadCell(int column, int row) {
+		//System.out.println(wrksheet.getCell(column, row).getContents());
+		return wrksheet.getCell(column, row).getContents();
+	}
+
+	// Return Column Dictionary to hold all the Column Names
+	public static void ColumnDictionary() {
+		// Iterate through all the columns in the Excel sheet and store the
+		// value in Hashtable
+		dict = new Hashtable<String, Integer>();
+		for (int col = 0; col < wrksheet.getColumns(); col++) {
+			try {
+				dict.put(ReadCell(col, 0), col);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static HashMap<Integer,String> getColumnDictionary() {
+		// Iterate through all the columns in the Excel sheet and store the
+		// value in Hashtable
+		dictGet = new HashMap<Integer,String >();
+		for (int col = 0; col < wrksheet.getColumns(); col++) {
+			try {
+				dictGet.put(col,ReadCell(col, 0));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return dictGet;
+	}
+	
+	// Read Column Names
+	public static int GetCell(String colName) {
+		try {
+			int value;
+			value = ((Integer) dict.get(colName)).intValue();
+			return value;
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+			return (0);
+		}
+	}
+}

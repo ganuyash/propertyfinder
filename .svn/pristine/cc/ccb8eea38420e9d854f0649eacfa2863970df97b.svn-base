@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proconnect-usage-request>
+	<site-serial-no>102387</site-serial-no>
+	<sequence-no>02</sequence-no>
+	<!-- a Retry or Normal -->
+	<send-type>Normal</send-type>          
+	<timestamp>30/2/2014 13:25:20</timestamp>
+	<host-name>ishanh-7-dem</host-name> 
+	<ip-address>172.34.83.108</ip-address> 
+	<version>V007</version>
+	<usage>
+		<usage-date>7/2/2014</usage-date>
+		<product>
+			<name></name>
+			<api-connections>
+				<api-connection>
+					<api-name>get-crm-account-details</api-name>
+					<no-of-calls>1000000</no-of-calls>
+					<bytes-in>1048576000</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</api-connection> 
+				<api-connection>
+					<api-name>get-hrm-account-details</api-name>
+					<no-of-calls>1000000</no-of-calls>
+					<bytes-in>104857600</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</api-connection>                                                         
+			</api-connections>
+			<user-connections>
+				<user-connection>
+					<user-name>Gary Ablett1</user-name>
+					<no-of-calls>200000</no-of-calls>
+					<bytes-in>209715200</bytes-in>  
+					<bytes-out>209715200</bytes-out>
+				</user-connection>                                                  
+			</user-connections>                                             
+		</product>
+		<total-byte-count-day>419430400</total-byte-count-day>
+		<total-api-count-day>200000</total-api-count-day>                       
+	</usage>
+	<usage>
+		<usage-date>6/2/2014</usage-date>
+		<product>
+			<name></name>
+			<api-connections>
+				<api-connection>
+					<api-name>get-crm-account-details</api-name>
+					<no-of-calls>100000</no-of-calls>
+					<bytes-in>104857600</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</api-connection> 
+				<api-connection>
+					<api-name>get-hrm-account-details</api-name>
+					<no-of-calls>100000</no-of-calls>
+					<bytes-in>104857600</bytes-in>  
+					<bytes-out>104857600</bytes-out>
+				</api-connection>                                                         
+			</api-connections>
+			<user-connections>
+				<user-connection>
+					<user-name>Gary Ablett1</user-name>
+					<no-of-calls>200000</no-of-calls>
+					<bytes-in>209715200</bytes-in>  
+					<bytes-out>209715200</bytes-out>
+				</user-connection>                                                  
+			</user-connections>                                             
+		</product>
+		<total-byte-count-day>419430400</total-byte-count-day>
+		<total-api-count-day>200000</total-api-count-day>                       
+	</usage>
+	<total-byte-count>838860800</total-byte-count>  
+	<total-no-of-calls>400000</total-no-of-calls>
+	<hash>3329i3223mldmsdfs9fdsdff</hash>
+</proconnect-usage-request>

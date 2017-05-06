@@ -1,0 +1,55 @@
+package com.pronto.licenseserver.test.utils;
+
+import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.List;
+
+public class NumberFormatter {
+
+	public static String getFormettedNumber(String s) {
+
+		DecimalFormat df;
+		String formatedNum;
+		List<String> s1 = Arrays.asList(s.split(":"));
+		System.out.println(s1.get(0));
+		System.out.println(s1.get(1));
+
+		String format;
+		if (s1.get(1).equals("MB")) {
+			format = "#,###,##0MB";
+			df = new DecimalFormat(format);
+			formatedNum = df.format(Double.parseDouble(s1.get(0)));
+//			System.out.println(df.format(Double.parseDouble(s1.get(0))));
+		} else if (s1.get(1).equals("B")) {
+			format = "#,###,##0B";
+			df = new DecimalFormat(format);
+			formatedNum = df.format(Double.parseDouble(s1.get(0)));
+//			System.out.println(df.format(Double.parseDouble(s1.get(0))));
+		}else if (s1.get(1).equals("k")) {
+			format = "#,###,##0k";
+			df = new DecimalFormat(format);
+			formatedNum = df.format(Double.parseDouble(s1.get(0)));
+//			System.out.println(df.format(Double.parseDouble(s1.get(0))));
+		} 
+		else {
+			throw new IllegalArgumentException(
+					"Cannot format given Object as a Number");
+		}
+		return formatedNum;
+	}
+
+	public static void main(String[] args) {
+		//
+		// DecimalFormat df = new DecimalFormat("#,###,##0.00");
+		// System.out.println(df.format(364565.14));
+		// System.out.println(df.format(364565.1454));
+
+		// formatting numbers upto 3 decimal places in Java
+		// df = new DecimalFormat("#,###,##0MB");
+		// System.out.println(df.format(4565.14));
+		// System.out.println(df.format(364565.1454));
+
+		System.out.println(getFormettedNumber("1001:B"));
+
+	}
+}

@@ -1,0 +1,34 @@
+package com.pronto.licenseserver.test.execution;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+
+
+import com.pronto.licenseserver.test.dataobject.LoginData;
+import com.pronto.licenseserver.test.helper.TestCasePrevLoad;
+import com.pronto.licenseserver.test.pageobject.LoginPage;
+
+public class LoginExecution extends TestCasePrevLoad {
+
+	
+	@Test(dataProvider = "loginData" , dataProviderClass = LoginData.class )
+	public static void LoginExecute(String userName, String password, String a, String b, String c) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		//setting login Data
+		LoginData loginData = new LoginData();
+		loginData.setUserName(userName);
+		loginData.setPassword(password);
+		
+		driver.get("http://172.17.4.74:8080/LicensingServer/login");
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.newUserLogin(loginData);
+		
+		assert driver.getTitle().contains("License Hub");
+		
+		
+	}
+	
+	
+}
