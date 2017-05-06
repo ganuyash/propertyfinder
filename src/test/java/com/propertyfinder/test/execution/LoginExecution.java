@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.propertyfinder.test.dataobject.LoginData;
+import com.propertyfinder.test.dataobject.SearchPropertyData;
 import com.propertyfinder.test.helper.ResultHandler;
 import com.propertyfinder.test.helper.TestCasePrevLoad;
 import com.propertyfinder.test.pageobject.ItemPage;
@@ -20,7 +20,7 @@ public class LoginExecution extends TestCasePrevLoad {
 	String reject = "Empty";
 	String path = "data/TestCases/UserlevelCheck.xls";
 
-	@Test(dataProvider = "loginData", dataProviderClass = LoginData.class)
+	@Test(dataProvider = "loginData", dataProviderClass = SearchPropertyData.class)
 	public void LoginExecute(String serviceType, String city,
 			String propertyType, String duration, String minPrice,
 			String maxPrice, String minBedCount, String maxBedCount,
