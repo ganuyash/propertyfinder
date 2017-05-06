@@ -13,7 +13,7 @@ import com.propertyfinder.test.pageobject.ItemPage;
 import com.propertyfinder.test.pageobject.LandingPage;
 import com.propertyfinder.test.pageobject.SearchResultPage;
 
-public class LoginExecution extends TestCasePrevLoad {
+public class FindMyProperty extends TestCasePrevLoad {
 
 	int execuionCount = 1;// Value set to 1, skip the headers
 	String status;

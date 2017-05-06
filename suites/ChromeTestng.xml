@@ -8,7 +8,7 @@
 		
 		<classes>
 			
-			<class name="com.propertyfinder.test.execution.LoginExecution" />
+			<class name="com.propertyfinder.test.execution.FindMyProperty" />
 			
 		</classes>
 		

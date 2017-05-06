@@ -4,13 +4,13 @@
 	<test name="SearchChrome">
 	<parameter name="browser" value="Chrome"></parameter>
 		<classes>
-			<class name="com.propertyfinder.test.execution.LoginExecution" />
+			<class name="com.propertyfinder.test.execution.FindMyProperty" />
 		</classes>
 	</test>
 	<test name="SearchFirefox">
 	<parameter name="browser" value="FF"></parameter>
 		<classes>
-			<class name="com.propertyfinder.test.execution.LoginExecution" />
+			<class name="com.propertyfinder.test.execution.FindMyProperty" />
 		</classes>
 	</test>
 </suite>
